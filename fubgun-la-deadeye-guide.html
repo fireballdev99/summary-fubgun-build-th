@@ -423,6 +423,75 @@
   .slot-map {
     font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px;
   }
+
+  /* BUILD SWITCHER */
+  .build-switcher {
+    display: flex; align-items: center; justify-content: center; gap: 0;
+    background: var(--bg2);
+    border-bottom: 2px solid var(--border);
+    padding: 0;
+  }
+  .switcher-btn {
+    flex: 1; max-width: 340px;
+    background: none; border: none; cursor: pointer;
+    padding: 14px 24px;
+    font-family: 'Sarabun', sans-serif;
+    color: var(--muted);
+    font-size: 15px; font-weight: 600;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .switcher-btn span { font-size: 12px; font-weight: 400; display: block; opacity: 0.7; }
+  .switcher-btn:hover { color: var(--white); background: rgba(255,255,255,0.04); }
+  .switcher-btn.active.la  { color: var(--gold2); border-bottom-color: var(--gold); background: rgba(200,169,110,0.06); }
+  .switcher-btn.active.la span { color: var(--gold); opacity: 1; }
+  .switcher-btn.active.ice { color: #a0d8ff; border-bottom-color: #5ab0ff; background: rgba(90,176,255,0.06); }
+  .switcher-btn.active.ice span { color: #5ab0ff; opacity: 1; }
+  .switcher-sep { color: var(--border); font-size: 20px; padding: 0 8px; }
+
+  /* ICE SHOT ENDGAME */
+  .ice-section-title {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: #5ab0ff; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .ice-section-title::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(90,176,255,0.3), transparent);
+  }
+  .ice-tab-btn { color: var(--muted); }
+  .ice-tab-btn.active {
+    background: #0e1e35; border-color: #2a4060;
+    border-bottom-color: #0e1e35; color: #5ab0ff; font-weight: 600;
+  }
+  .ice-overview-card h3 { color: #5ab0ff; }
+  .ice-notes-box {
+    background: rgba(90,176,255,0.04);
+    border-left: 3px solid #5ab0ff;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px; font-size: 14px; line-height: 1.8; color: #ccc;
+  }
+  .ice-notes-box p { margin-bottom: 8px; }
+  .ice-notes-box p:last-child { margin-bottom: 0; }
+  .gem-ref {
+    display: inline-block;
+    background: rgba(90,176,255,0.12); border: 1px solid rgba(90,176,255,0.25);
+    border-radius: 4px; padding: 0 6px; font-size: 12px; color: #8ecfff;
+    font-weight: 600; white-space: nowrap;
+  }
+  .ice-variant-desc {
+    background: rgba(90,176,255,0.05); border: 1px solid rgba(90,176,255,0.15);
+    border-radius: 8px; padding: 12px 16px;
+    font-size: 14px; color: #aaa; margin-bottom: 16px; line-height: 1.6;
+  }
+  .weapon-set-badge {
+    font-size: 10px; background: rgba(200,169,110,0.15); color: var(--gold);
+    border: 1px solid rgba(200,169,110,0.3); border-radius: 4px;
+    padding: 1px 6px; margin-left: 6px; font-weight: 700; flex-shrink: 0;
+  }
 </style>
 </head>
 <body>
@@ -439,6 +508,20 @@
   </div>
 </div>
 
+<!-- BUILD SWITCHER -->
+<div class="build-switcher">
+  <button class="switcher-btn active la" onclick="switchBuild('leveling', this, 'la')">
+    ⚡ Leveling Guide
+    <span>Lightning Arrow Deadeye</span>
+  </button>
+  <div class="switcher-sep">|</div>
+  <button class="switcher-btn ice" onclick="switchBuild('endgame', this, 'ice')">
+    ❄️ Endgame Build
+    <span>Ice Shot Deadeye</span>
+  </button>
+</div>
+
+<div id="build-leveling">
 <!-- OVERVIEW -->
 <div class="overview">
   <div class="overview-grid">
@@ -1087,16 +1170,361 @@
 
 </div><!-- end tabs-container -->
 
-<footer>
-  สรุปจาก Fubgun's Lightning Arrow Deadeye Leveling Guide (v0.5) · mobalytics.gg · อัปเดต 29 พ.ค. 2026
+</div><!-- end #build-leveling -->
+
+<!-- ====================================================== -->
+<!-- ENDGAME: ICE SHOT DEADEYE                              -->
+<!-- ====================================================== -->
+<div id="build-endgame" style="display:none">
+
+<div class="overview" style="margin-top:24px;">
+  <div class="overview-grid">
+    <div class="overview-card ice-overview-card">
+      <h3>❄️ Build Overview</h3>
+      <ul class="tip-list">
+        <li>Clear ด้วย <span class="highlight-blue">Ice Shot</span> — freeze pack ทั้งหมด</li>
+        <li>Boss damage หลักจาก <span class="highlight-blue">Snipe</span> — one-shot ได้ด้วย gear ดี</li>
+        <li>Main Skill Set 1 · <span class="highlight">Freezing Mark</span> อยู่ Set 2</li>
+        <li>Non-crit ก่อน → swap crit เมื่อ gear พร้อม</li>
+      </ul>
+    </div>
+    <div class="overview-card ice-overview-card">
+      <h3>⚡ Ascendancy (Endgame)</h3>
+      <div class="asc-chain">
+        <div class="asc-step"><div class="asc-num" style="background:rgba(90,176,255,0.15);border-color:rgba(90,176,255,0.3);color:#5ab0ff;">1</div><div class="asc-node" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.25);color:#a0d8ff;">Point Blank</div></div>
+        <div class="asc-down" style="color:rgba(90,176,255,0.4);">↓</div>
+        <div class="asc-step"><div class="asc-num" style="background:rgba(90,176,255,0.15);border-color:rgba(90,176,255,0.3);color:#5ab0ff;">2</div><div class="asc-node" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.25);color:#a0d8ff;">Endless Munitions</div></div>
+        <div class="asc-down" style="color:rgba(90,176,255,0.4);">↓</div>
+        <div class="asc-step"><div class="asc-num" style="background:rgba(90,176,255,0.15);border-color:rgba(90,176,255,0.3);color:#5ab0ff;">3</div><div class="asc-node" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.25);color:#a0d8ff;">Gathering Winds</div></div>
+        <div class="asc-down" style="color:rgba(90,176,255,0.4);">↓</div>
+        <div class="asc-step"><div class="asc-num" style="background:rgba(90,176,255,0.15);border-color:rgba(90,176,255,0.3);color:#5ab0ff;">4</div><div class="asc-node" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.25);color:#a0d8ff;">Mirage Deadeye</div></div>
+      </div>
+    </div>
+    <div class="overview-card ice-overview-card">
+      <h3>⚔️ Boss Rotation</h3>
+      <ul class="tip-list">
+        <li>วาง <span class="highlight-blue">Tornado Shot</span> ล่วงหน้า</li>
+        <li>Cast <span class="highlight-blue">Ice-Tipped Arrows</span></li>
+        <li>Spam <span class="highlight-blue">Ice Shot</span> จนบอส freeze</li>
+        <li>ใช้ <span class="highlight">Barrage</span> → <span class="highlight">Snipe</span> ทันที</li>
+        <li>รักษา <span class="highlight-blue">Freezing Mark</span> buff ตลอด (20 วิ)</li>
+      </ul>
+    </div>
+    <div class="overview-card ice-overview-card">
+      <h3>💡 Tips สำคัญ (Endgame)</h3>
+      <ul class="tip-list">
+        <li>Bow: <span class="highlight">Obliterator Bow</span> — base DPS สูงสุด</li>
+        <li>Quiver: flat damage + bow dmg + proj speed + attack speed</li>
+        <li>Amulet: ต้องมี <span class="highlight">≥30 Spirit</span> เพื่อใช้ spirit gems</li>
+        <li>Anoint: <span class="highlight">Serrated Edges</span> (ถูกและ effective)</li>
+        <li>Jewel: ต้องมี <span class="highlight">Sapphire + mana on kill</span> 1 ชิ้น</li>
+        <li>Rarity ≥100% เพื่อ farm อย่างมีประสิทธิภาพ</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ICE SHOT TABS -->
+<div class="tabs-container">
+  <div class="tab-nav" id="ice-tab-nav">
+    <button class="tab-btn ice-tab-btn active" onclick="switchIceTab('ie1', this)">Early</button>
+    <button class="tab-btn ice-tab-btn" onclick="switchIceTab('ie2', this)">Non-Crit Midgame</button>
+    <button class="tab-btn ice-tab-btn" onclick="switchIceTab('ie3', this)">Hybrid Swap</button>
+    <button class="tab-btn ice-tab-btn" onclick="switchIceTab('ie4', this)">Crit Swap</button>
+  </div>
+
+  <!-- === EARLY === -->
+  <div id="ie1" class="tab-panel active" style="background:#0d141f;border-color:#1a2d45;">
+    <div class="ice-variant-desc">เข้า Maps ระยะแรก · SSF viable · Non-crit · Pure Life/Evasion setup</div>
+
+    <div class="ice-section-title">⚔️ Skills &amp; Gems</div>
+    <div class="skills-grid">
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp" alt="Ice Shot">
+        <div class="skill-name">Ice Shot</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IceBiteSupportGem.webp" alt="">Ice Bite II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ForkSupportGem.webp" alt="">Fork</div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp" alt="Snipe">
+        <div class="skill-name">Snipe</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp" alt="">Elemental Focus</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp" alt="">Window of Opp. II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.webp" alt="">Close Combat II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Tornado Shot">
+        <div class="skill-name">Tornado Shot</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp" alt="">Prolonged Duration II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp" alt="">Overabundance II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+        </div>
+        <span class="skill-tag tag-utility">Utility</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Barrage">
+        <div class="skill-name">Barrage</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp" alt="">Cooldown Recovery II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FarCombatSupportGem.webp" alt="">Far Combat II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp" alt="">Mark of Siphoning II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss Burst</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:rgba(200,169,110,0.3);background:rgba(200,169,110,0.03);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Freezing Mark">
+        <div class="skill-name">Freezing Mark</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp" alt="">Mark of Siphoning II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DazeonCritSupportGem.webp" alt="">Eternal Mark</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp" alt="">Cooldown Recovery II</div>
+        </div>
+        <span class="skill-tag tag-utility">Debuff</span><span class="weapon-set-badge" style="color:#e05050;border-color:rgba(224,80,80,0.3);background:rgba(224,80,80,0.12);">SET 2</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="ice-section-title">📋 คำแนะนำ Gems</div>
+    <div class="ice-notes-box">
+      <p>ลำดับ 6-link priority: <span class="gem-ref">Snipe</span> → <span class="gem-ref">Ice Shot</span> → <span class="gem-ref">Herald of Ice</span> → <span class="gem-ref">Freezing Mark</span></p>
+      <p>Quality priority: <span class="gem-ref">Freezing Mark</span> → <span class="gem-ref">Herald of Ice</span> → <span class="gem-ref">Snipe</span> → <span class="gem-ref">Ice Shot</span></p>
+      <p><strong style="color:var(--red);">อย่าใช้ Elemental Armament III</strong> — ใช้แค่ Level 2 เท่านั้น</p>
+      <p>ถ้า spirit ไม่พอ: drop <span class="gem-ref">Mirage Archer</span> แล้วใช้ <span class="gem-ref">Wind Dancer</span> + Blind II + Knockback แทน</p>
+    </div>
+
+    <div class="divider"></div>
+    <div class="ice-section-title">🎒 Equipment</div>
+    <div class="equip-grid">
+      <div class="equip-card" style="border-color:rgba(90,176,255,0.3);background:rgba(0,20,50,0.3);">
+        <div style="font-size:24px;margin:8px 0;">🏹</div>
+        <div class="equip-slot">Bow ⭐</div>
+        <div class="equip-name" style="color:#5ab0ff;">Obliterator Bow</div>
+        <div class="equip-mods">Highest DPS ele/phys<br>+ Greater Iron Rune</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex04.webp" onerror="this.style.opacity='0.3'" alt="">
+        <div class="equip-slot">Helmet</div>
+        <div class="equip-name">Desert Cap</div>
+        <div class="equip-mods">Life + Evasion + Resist<br>(ทีหลัง: ES Subterfuge Mask)</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex10.webp" onerror="this.style.opacity='0.3'" alt="">
+        <div class="equip-slot">Body</div>
+        <div class="equip-name">Corsair Coat</div>
+        <div class="equip-mods">Evasion สูงสุด<br>+ Greater Iron Rune</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex04.webp" onerror="this.style.opacity='0.3'" alt="">
+        <div class="equip-slot">Gloves</div>
+        <div class="equip-name">Grand Bracers</div>
+        <div class="equip-mods">Flat cold/phys damage to attacks</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex04.webp" onerror="this.style.opacity='0.3'" alt="">
+        <div class="equip-slot">Boots</div>
+        <div class="equip-name">Cavalry Boots</div>
+        <div class="equip-mods">Movement Speed + Life/Resist</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/PrismaticRing.webp" onerror="this.style.opacity='0.3'" alt="">
+        <div class="equip-slot">Ring x2</div>
+        <div class="equip-name">Prismatic Ring</div>
+        <div class="equip-mods">Flat cold/phys dmg + Resist ครบ 75%</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/StellarAmulet.webp" onerror="this.style.opacity='0.3'" alt="">
+        <div class="equip-slot">Amulet ⭐</div>
+        <div class="equip-name">Stellar Amulet</div>
+        <div class="equip-mods">+Proj Levels · ≥30 Spirit<br>Crit/Attr/Resist</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="ice-section-title">🌳 Passive Tree</div>
+    <div class="passive-note" style="border-left-color:#5ab0ff;background:rgba(90,176,255,0.04);">
+      ต้องการ Dex เป็น default · ใช้ Str/Int ตามที่ gear ต้องการ · tree lvl 75 — เริ่ม Maps ราว lvl 60-65 แล้ว fill nodes ไปเรื่อยๆ<br>
+      ถ้า quiver มี projectile speed: เอา <strong style="color:#5ab0ff;">Feathered Fletching</strong> ด้วย
+    </div>
+  </div>
+
+  <!-- === NON-CRIT MIDGAME === -->
+  <div id="ie2" class="tab-panel" style="background:#0d141f;border-color:#1a2d45;">
+    <div class="ice-variant-desc">Midgame — ผ่าน pinnacle bosses (quest version) ได้ · SSF/เทรดน้อย · Non-crit</div>
+    <div class="ice-section-title">⚔️ Skills &amp; Gems (เพิ่มจาก Early)</div>
+    <div class="skills-grid">
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp" alt="Ice Shot">
+        <div class="skill-name">Ice Shot</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elem. Armament II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IceBiteSupportGem.webp" alt="">Ice Bite II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ForkSupportGem.webp" alt="">Fork</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp" alt="">Elemental Focus <span style="color:var(--gold);font-weight:700;">★ใหม่</span></div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp" alt="Snipe">
+        <div class="skill-name">Snipe</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elem. Armament II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp" alt="">Elemental Focus</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp" alt="">Window of Opp. II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.webp" alt="">Close Combat II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Barrage">
+        <div class="skill-name">Barrage + Tornado Shot</div>
+        <div class="support-chips"><span class="plus">—</span><span style="font-size:13px;color:var(--muted);">เหมือน Early</span></div>
+        <span class="skill-tag tag-boss">Boss Burst</span>
+      </div>
+      <div class="skill-row" style="border-color:rgba(200,169,110,0.3);background:rgba(200,169,110,0.03);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Freezing Mark">
+        <div class="skill-name">Freezing Mark</div>
+        <div class="support-chips"><span class="plus">—</span><span style="font-size:13px;color:var(--muted);">เหมือน Early</span></div>
+        <span class="skill-tag tag-utility">Debuff</span><span class="weapon-set-badge" style="color:#e05050;border-color:rgba(224,80,80,0.3);background:rgba(224,80,80,0.12);">SET 2</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="ice-section-title">📋 คำแนะนำ</div>
+    <div class="ice-notes-box">
+      <p>ระยะนี้ควรเริ่มหา <span class="gem-ref">Obliterator Bow</span> ใน trade หรือ craft เอง — เป็น upgrade ใหญ่ที่สุด</p>
+      <p>ลำดับ 6-link priority: <span class="gem-ref">Snipe</span> → <span class="gem-ref">Ice Shot</span> → <span class="gem-ref">Herald of Ice</span> → <span class="gem-ref">Freezing Mark</span></p>
+      <p>เพิ่ม <span class="gem-ref">Elemental Focus</span> ใน Ice Shot link เมื่อมี 5-link</p>
+    </div>
+  </div>
+
+  <!-- === HYBRID SWAP === -->
+  <div id="ie3" class="tab-panel" style="background:#0d141f;border-color:#1a2d45;">
+    <div class="ice-variant-desc">เปลี่ยนเป็น Hybrid (Evasion/Energy Shield) — defense ดีขึ้นมาก · ยัง Non-crit</div>
+    <div class="ice-section-title">⚔️ Skills (เปลี่ยนจาก Midgame)</div>
+    <div class="skills-grid">
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp" alt="Ice Shot">
+        <div class="skill-name">Ice Shot + Snipe + Barrage</div>
+        <div class="support-chips"><span class="plus">—</span><span style="font-size:13px;color:var(--muted);">เหมือน Midgame</span></div>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Ghost Dance">
+        <div class="skill-name" style="color:#a0d8ff;">Ghost Dance <span style="font-size:11px;color:var(--gold);">⭐ ใหม่</span></div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DurabilitySupportGem.webp" alt="">Durability</div>
+        </div>
+        <span class="skill-tag tag-utility">Defense ใหม่</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="ice-section-title">🎒 Equipment (สำคัญ)</div>
+    <div class="notes-box">
+      <div class="note-item"><span>เปลี่ยน body armor เป็น <span class="item">ES/Evasion Hybrid chest</span> — defense จะดีขึ้นมาก</span></div>
+      <div class="note-item"><span>ลำดับนี้ดีกว่า swap ไป crit ก่อน เพราะ crit gear แพงกว่า hybrid</span></div>
+      <div class="note-item"><span>ยังคง focus ที่ flat cold/phys damage บน ring + gloves</span></div>
+    </div>
+  </div>
+
+  <!-- === CRIT SWAP === -->
+  <div id="ie4" class="tab-panel" style="background:#0d141f;border-color:#1a2d45;">
+    <div class="ice-variant-desc">Full Crit Endgame — damage สูงสุด · แพงกว่า non-crit อย่างเห็นได้ชัด (crafting nerfs 0.5)</div>
+    <div class="ice-section-title">⚔️ Skills (เปลี่ยนจาก Hybrid)</div>
+    <div class="skills-grid">
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp" alt="Ice Shot">
+        <div class="skill-name">Ice Shot</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elem. Armament II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IceBiteSupportGem.webp" alt="">Ice Bite II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ForkSupportGem.webp" alt="">Fork</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InevitableCriticalsSupportGem.webp" alt="">Inevitable Criticals <span style="color:var(--gold);font-weight:700;">★</span></div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp" alt="Snipe">
+        <div class="skill-name">Snipe</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elem. Armament II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp" alt="">Elemental Focus</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp" alt="">Window of Opp. II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CloseCombatSupportGem.webp" alt="">Close Combat II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span><span class="weapon-set-badge">SET 1</span>
+      </div>
+      <div class="skill-row" style="border-color:#1a3050;background:rgba(0,20,40,0.3);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Wind Dancer">
+        <div class="skill-name" style="color:#a0d8ff;">Wind Dancer <span style="font-size:11px;color:var(--gold);">⭐ ใหม่</span></div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/BlindSupportGem.webp" alt="">Blind II</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp" alt="">Knockback</div>
+          <div class="support-chip" style="background:rgba(90,176,255,0.08);border-color:rgba(90,176,255,0.2);color:#8ecfff;"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MaimSupportGem.webp" alt="">Maim</div>
+        </div>
+        <span class="skill-tag tag-utility">Defense</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="ice-section-title">📋 คำแนะนำ Crit</div>
+    <div class="ice-notes-box">
+      <p><strong style="color:var(--red);">แพงกว่า non-crit มาก</strong> เพราะ crafting nerfs ใน 0.5 — ทำ non-crit ก่อนจนกว่า gear พร้อม</p>
+      <p>เพิ่ม <span class="gem-ref">Inevitable Criticals</span> ใน Ice Shot · เปลี่ยน Ghost Dance → <span class="gem-ref">Wind Dancer</span></p>
+      <p>Anoint: <span class="gem-ref">Serrated Edges</span> — ถูกและ effective มากสำหรับ crit setup</p>
+      <p>ต้องการ jewels: <span class="gem-ref">Heart of the Well</span> + <span class="gem-ref">Against the Darkness</span> ทั้งคู่ด้วย "gain as extra" double roll</p>
+    </div>
+  </div>
+</div><!-- end ice shot tabs -->
+
+</div><!-- end #build-endgame -->
+
+<footer id="site-footer">
+  สรุปจาก Fubgun's Lightning Arrow Deadeye Leveling Guide &amp; Ice Shot Deadeye Endgame (v0.5) · mobalytics.gg · อัปเดต 29 พ.ค. 2026
 </footer>
 
 <script>
 function switchTab(id, btn) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#build-leveling .tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('#build-leveling .tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
+}
+
+function switchIceTab(id, btn) {
+  document.querySelectorAll('#build-endgame .tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('#build-endgame .tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function switchBuild(build, btn, cls) {
+  document.querySelectorAll('.switcher-btn').forEach(b => b.classList.remove('active','la','ice'));
+  btn.classList.add('active', cls);
+  document.getElementById('build-leveling').style.display = build === 'leveling' ? '' : 'none';
+  document.getElementById('build-endgame').style.display  = build === 'endgame'  ? '' : 'none';
 }
 </script>
 </body>
