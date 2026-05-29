@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fubgun's Lightning Arrow Deadeye — คู่มือเลเวล (v0.5)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap');
+
+  :root {
+    --bg: #0d0d14;
+    --bg2: #13131f;
+    --bg3: #1a1a2e;
+    --card: #1e1e30;
+    --card2: #252540;
+    --border: #2e2e50;
+    --gold: #c8a96e;
+    --gold2: #f0d080;
+    --lightning: #7ec8ff;
+    --lightning2: #a0d8ff;
+    --green: #5cbf8a;
+    --red: #e05050;
+    --white: #e8e8e8;
+    --muted: #888;
+    --unique: #a05030;
+    --unique-border: #c06030;
+    --tab-active: #2a2a45;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d0d20 0%, #1a1040 50%, #0d0d20 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 28px 24px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(124,200,255,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(124,200,255,0.1);
+    border: 1px solid rgba(124,200,255,0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: var(--lightning);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    font-size: clamp(22px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--gold2);
+    text-shadow: 0 0 30px rgba(200,169,110,0.4);
+    line-height: 1.2;
+  }
+  .header-sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  .header-meta {
+    display: flex; justify-content: center; gap: 24px;
+    margin-top: 16px; flex-wrap: wrap;
+  }
+  .meta-pill {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+  .meta-pill .label { color: var(--muted); }
+  .meta-pill .value { color: var(--gold); font-weight: 600; }
+
+  /* OVERVIEW */
+  .overview {
+    max-width: 900px; margin: 24px auto; padding: 0 16px;
+  }
+  .overview-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;
+  }
+  .overview-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .overview-card h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--lightning);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tip-list { list-style: none; }
+  .tip-list li {
+    padding: 4px 0;
+    font-size: 14px;
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+  .tip-list li::before { content: '›'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+  .highlight { color: var(--gold); font-weight: 600; }
+  .highlight-blue { color: var(--lightning); font-weight: 600; }
+  .highlight-green { color: var(--green); font-weight: 600; }
+  .highlight-red { color: var(--red); font-weight: 600; }
+
+  .asc-chain {
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .asc-node {
+    background: rgba(124,200,255,0.1);
+    border: 1px solid rgba(124,200,255,0.3);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: var(--lightning2);
+    font-weight: 600;
+  }
+  .asc-arrow { color: var(--gold); font-size: 16px; }
+
+  .regex-box {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--green);
+    margin-top: 8px;
+    word-break: break-all;
+    cursor: pointer;
+  }
+  .regex-box:hover { border-color: var(--green); }
+
+  /* TABS */
+  .tabs-container {
+    max-width: 900px; margin: 24px auto 0; padding: 0 16px;
+  }
+  .tab-nav {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 0;
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    padding: 10px 18px;
+    font-size: 14px;
+    font-family: 'Sarabun', sans-serif;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+    transition: all 0.2s;
+    position: relative;
+    top: 2px;
+  }
+  .tab-btn:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+  .tab-btn.active {
+    background: var(--tab-active);
+    border-color: var(--border);
+    border-bottom-color: var(--tab-active);
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .tab-btn .lvl-badge {
+    font-size: 11px;
+    background: rgba(124,200,255,0.15);
+    color: var(--lightning);
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-left: 4px;
+  }
+
+  .tab-panel {
+    display: none;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .tab-panel.active { display: block; }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--lightning);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .skill-row {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .skill-row.boss-only {
+    border-color: rgba(200,169,110,0.3);
+    background: rgba(200,169,110,0.04);
+  }
+  .gem-icon {
+    width: 40px; height: 40px;
+    border-radius: 6px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--border);
+  }
+  .gem-icon.small {
+    width: 32px; height: 32px;
+    border-radius: 4px;
+  }
+  .skill-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    min-width: 130px;
+  }
+  .support-chips {
+    display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+  }
+  .support-chip {
+    display: flex; align-items: center; gap: 5px;
+    background: rgba(124,200,255,0.08);
+    border: 1px solid rgba(124,200,255,0.2);
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 12px;
+    color: var(--lightning2);
+  }
+  .plus { color: var(--muted); font-size: 14px; margin-right: 2px; }
+  .skill-tag {
+    margin-left: auto;
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .tag-boss { background: rgba(200,169,110,0.15); color: var(--gold); border: 1px solid rgba(200,169,110,0.3); }
+  .tag-clear { background: rgba(92,191,138,0.15); color: var(--green); border: 1px solid rgba(92,191,138,0.3); }
+  .tag-utility { background: rgba(180,120,220,0.15); color: #c090e0; border: 1px solid rgba(180,120,220,0.3); }
+  .tag-drop { background: rgba(200,80,80,0.15); color: var(--red); border: 1px solid rgba(200,80,80,0.3); }
+
+  /* TWO COLUMNS */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* EQUIPMENT */
+  .equip-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px;
+  }
+  .equip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .equip-card:hover { border-color: var(--gold); }
+  .equip-card.is-unique {
+    background: linear-gradient(135deg, rgba(160,80,48,0.15), rgba(192,96,48,0.08));
+    border-color: var(--unique-border);
+  }
+  .equip-card.is-unique:hover { border-color: var(--gold2); }
+  .equip-img {
+    width: 52px; height: 52px;
+    object-fit: contain;
+  }
+  .equip-slot {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+  }
+  .equip-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .equip-card.is-unique .equip-name { color: var(--unique-border); }
+  .equip-mods {
+    font-size: 11px;
+    color: #9090b0;
+    line-height: 1.4;
+  }
+
+  /* NOTES BOX */
+  .notes-box {
+    background: rgba(200,169,110,0.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin-top: 4px;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #ccc;
+  }
+  .notes-box .note-item {
+    display: flex; gap: 8px; margin-bottom: 6px;
+  }
+  .notes-box .note-item::before {
+    content: '⚡';
+    flex-shrink: 0;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .notes-box .warn {
+    color: var(--red);
+    font-weight: 600;
+  }
+  .notes-box .good { color: var(--green); }
+  .notes-box .item { color: var(--gold); font-weight: 600; }
+
+  /* PASSIVE NOTES */
+  .passive-note {
+    background: rgba(124,200,255,0.05);
+    border-left: 3px solid var(--lightning);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #ccc;
+    margin-top: 4px;
+  }
+
+  /* BOSS ORDER */
+  .boss-chain {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .boss-node {
+    background: rgba(224,80,80,0.1);
+    border: 1px solid rgba(224,80,80,0.3);
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #e08888;
+    font-weight: 600;
+  }
+  .boss-arrow { color: var(--muted); }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  .divider { height: 1px; background: var(--border); margin: 20px 0; }
+
+  .slot-map {
+    font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">⚡ Path of Exile 2 · Patch 0.5</div>
+  <h1>Fubgun's Lightning Arrow Deadeye<br>คู่มือเลเวล (Leveling Guide)</h1>
+  <div class="header-sub">โดย Fubgun · อัปเดต 29 พ.ค. 2026 · ใช้ได้ทั้ง Ranger &amp; Huntress · SSF Viable</div>
+  <div class="header-meta">
+    <div class="meta-pill"><span class="label">Class</span><span class="value">Ranger / Huntress</span></div>
+    <div class="meta-pill"><span class="label">Ascendancy</span><span class="value">Deadeye</span></div>
+    <div class="meta-pill"><span class="label">Main Skill</span><span class="value">Lightning Arrow</span></div>
+    <div class="meta-pill"><span class="label">SSF</span><span class="value">✓ ใช้ได้</span></div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="overview">
+  <div class="overview-grid">
+    <!-- Ascendancy -->
+    <div class="overview-card">
+      <h3>⚡ Ascendancy (ตามลำดับ)</h3>
+      <div class="asc-chain">
+        <div class="asc-node">Gathering Winds</div>
+        <div class="asc-arrow">→</div>
+        <div class="asc-node">Point Blank</div>
+        <div class="asc-arrow">→</div>
+        <div class="asc-node">Endless Munitions</div>
+      </div>
+    </div>
+
+    <!-- Boss Kill Order -->
+    <div class="overview-card">
+      <h3>💀 ลำดับ Boss (Act 1)</h3>
+      <div class="boss-chain">
+        <div class="boss-node">Devourer</div>
+        <div class="boss-arrow">→</div>
+        <div class="boss-node">Cold Witch</div>
+        <div class="boss-arrow">→</div>
+        <div class="boss-node">Hut Witch</div>
+        <div class="boss-arrow">→</div>
+        <div class="boss-node">Rust King</div>
+      </div>
+    </div>
+
+    <!-- Quest Rewards -->
+    <div class="overview-card">
+      <h3>🎁 Quest Rewards ที่ต้องเลือก</h3>
+      <ul class="tip-list">
+        <li><span><span class="highlight">Act 2</span> — Charm recharge</span></li>
+        <li><span><span class="highlight">Act 3</span> — Stun threshold (Venom reward)</span></li>
+        <li><span><span class="highlight">Act 4</span> — Tattoos: lightning / int / fire resist</span></li>
+        <li><span><span class="highlight">Interlude</span> — Boon: movement speed</span></li>
+      </ul>
+    </div>
+
+    <!-- Tips -->
+    <div class="overview-card">
+      <h3>💡 Tips สำคัญตลอด Campaign</h3>
+      <ul class="tip-list">
+        <li>Salvage อาวุธที่มี quality ทุกชิ้น → ได้ Whetstone</li>
+        <li>Salvage ของที่มี socket → ได้ Artificer's Orb</li>
+        <li>รองเท้า <span class="highlight">Movement Speed</span> — ห้ามถอดเด็ดขาด</li>
+        <li><span class="highlight">Flat damage to attacks</span> บน ถุงมือ+แหวน = สำคัญที่สุด</li>
+        <li>Vendor ของ rare ทั้งหมดเพื่อสะสม gold → Gamble ใน Act 2-3</li>
+      </ul>
+    </div>
+
+    <!-- Vendor Regex -->
+    <div class="overview-card" style="grid-column: 1 / -1;">
+      <h3>🔍 Vendor Regex (copy ใส่ช่อง search ใน vendor)</h3>
+      <div class="regex-box" title="คลิกเพื่อ copy" onclick="navigator.clipboard.writeText(this.dataset.text); this.textContent='✓ Copied!';" data-text='"!cros|crud"'>"!cros|crud"</div>
+      <div class="regex-box" style="margin-top:6px;" onclick="navigator.clipboard.writeText(this.dataset.text); this.textContent='✓ Copied!';" data-text='"s: (am|ri|be|bow)|ovem|[egdl] to.at"'>"s: (am|ri|be|bow)|ovem|[egdl] to.at"</div>
+      <div style="font-size:12px; color:var(--muted); margin-top:6px;">คลิกเพื่อ copy · ใช้ค้นหา item ที่มี flat damage / movement speed จาก vendor</div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs-container">
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('t1', this)">Lvl 1–5</button>
+    <button class="tab-btn" onclick="switchTab('t2', this)">Lvl 6–14</button>
+    <button class="tab-btn" onclick="switchTab('t3', this)">Lvl 15–27</button>
+    <button class="tab-btn" onclick="switchTab('t4', this)">Lvl 28–40</button>
+    <button class="tab-btn" onclick="switchTab('t5', this)">Lvl 40–60+</button>
+    <button class="tab-btn" onclick="switchTab('t6', this)">Twink Uniques</button>
+  </div>
+
+  <!-- ===== TAB 1: LVL 1-5 ===== -->
+  <div id="t1" class="tab-panel active">
+    <div class="section-title">⚔️ Skills &amp; Gems</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/BowDefaultSkill.avif" alt="Bow Shot">
+        <div class="skill-name">Bow Shot</div>
+        <span class="skill-tag tag-clear">Clear / Auto</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif" alt="Lightning Arrow">
+        <div class="skill-name">Lightning Arrow</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip">
+            <img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif" alt="">
+            Rapid Attacks I
+          </div>
+          <div class="support-chip">
+            <img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">
+            Lightning Attunement
+          </div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif" alt="Lightning Rod">
+        <div class="skill-name">Lightning Rod</div>
+        <span class="skill-tag tag-boss">Boss DPS</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif" alt="Contagion">
+        <div class="skill-name">Contagion</div>
+        <span class="skill-tag tag-drop">Drop หลัง Redvale</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp" alt="Frost Bomb">
+        <div class="skill-name">Frost Bomb</div>
+        <span class="skill-tag tag-boss">Boss Debuff</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">📋 คำแนะนำ Skills</div>
+    <div class="notes-box">
+      <div class="note-item"><span><span class="item">Contagion</span> ดีมากช่วง lvl 1-5 สำหรับ clear pack — ให้ drop ทิ้งหลังออกจากโซน Redvale</span></div>
+      <div class="note-item"><span><span class="item">Frost Bomb</span> ใช้กับ boss เพื่อ apply debuff เท่านั้น ไม่ต้องสนใจ damage ของมัน</span></div>
+      <div class="note-item"><span>ใส่ <span class="item">Lightning Infusion</span> เข้าไปใน <span class="item">Lightning Rod</span> เพื่อ single target damage พุ่ง — ถ้า pre-fire rod ก่อนจะทำ damage ได้มหาศาล</span></div>
+      <div class="note-item"><span><span class="highlight-green">LA + Rod</span> คือ setup ที่ดีที่สุดสำหรับ <span class="item">Rust King</span> ใน Redvale</span></div>
+      <div class="note-item"><span class="warn">ไม่แนะนำ LA+Rod</span><span> กับ witch ทั้งสอง หรือ Devourer — ใช้ Bow Shot / auto attack จะดีกว่า</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🎒 Equipment</div>
+    <div class="equip-grid">
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif" alt="Boots">
+        <div class="equip-slot">Boots</div>
+        <div class="equip-name">รองเท้า</div>
+        <div class="equip-mods">10%+ Movement Speed<br><strong style="color:var(--red)">ห้ามถอด</strong></div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif" alt="Gloves">
+        <div class="equip-slot">Gloves</div>
+        <div class="equip-name">ถุงมือ</div>
+        <div class="equip-mods">Flat damage to Attacks<br>(Cold/Fire/Lightning/Phys)</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif" alt="Ring">
+        <div class="equip-slot">Ring x2</div>
+        <div class="equip-name">Iron Ring</div>
+        <div class="equip-mods">Flat damage to Attacks<br>Lightning / Phys</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow01.avif" alt="Bow">
+        <div class="equip-slot">Bow</div>
+        <div class="equip-name">Crude Bow</div>
+        <div class="equip-mods">Flat damage to Attacks<br>+1 Projectile Skills</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🌳 Passive Tree</div>
+    <div class="passive-note">
+      ใช้ Dexterity สำหรับ small attribute nodes ทั่วไป · ใช้ Strength/Int เฉพาะเมื่อต้องการ requirement ของ gear หรือ support gem เท่านั้น
+    </div>
+  </div>
+
+  <!-- ===== TAB 2: LVL 6-14 ===== -->
+  <div id="t2" class="tab-panel">
+    <div class="section-title">⚔️ Skills &amp; Gems</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif" alt="Lightning Arrow">
+        <div class="skill-name">Lightning Arrow</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif" alt="">Rapid Attacks I</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">Lightning Attunement</div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif" alt="Lightning Rod">
+        <div class="skill-name">Lightning Rod</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif" alt="">Elemental Armament I</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">Lightning Attunement</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp" alt="Frost Bomb">
+        <div class="skill-name">Frost Bomb</div>
+        <span class="skill-tag tag-boss">Boss Debuff</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerHeraldOfThunder.avif" onerror="this.src='https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif'" alt="Herald of Thunder">
+        <div class="skill-name">Herald of Thunder</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif" alt="">Elemental Armament I</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+        </div>
+        <span class="skill-tag tag-utility">Buff</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Barrage">
+        <div class="skill-name">Barrage</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.avif" alt="">Cooldown Recovery I</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss Burst</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Electrocuting Arrow">
+        <div class="skill-name">Electrocuting Arrow</div>
+        <span class="skill-tag tag-utility">Utility</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">📋 คำแนะนำ Skills</div>
+    <div class="notes-box">
+      <div class="note-item"><span>รับ Ascendancy point แรก: <span class="highlight">Gathering Winds</span></span></div>
+      <div class="note-item"><span><span class="item">Frost Bomb</span> ใช้ลด resist boss — <span class="warn">lvl 3 Frost Bomb ใช้ได้เฉพาะ boss ที่ level ≤25</span> เท่านั้น จะ drop ทิ้งเมื่อไม่มี int พอ upgrade</span></div>
+      <div class="note-item"><span>วาง <span class="item">Lightning Rod</span> ล่วงหน้าก่อน boss spawn แล้ว stack ให้ครบ — เพิ่ม DPS ได้มาก</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🎒 Equipment</div>
+    <div class="equip-grid">
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif" alt="">
+        <div class="equip-slot">Boots</div>
+        <div class="equip-name">Movement Speed Boots</div>
+        <div class="equip-mods">ต้องมี MS เสมอ</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif" alt="">
+        <div class="equip-slot">Gloves</div>
+        <div class="equip-name">ถุงมือ Flat Dmg</div>
+        <div class="equip-mods">Flat damage to Attacks</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif" alt="">
+        <div class="equip-slot">Ring x2</div>
+        <div class="equip-name">Iron Ring</div>
+        <div class="equip-mods">Flat damage to Attacks</div>
+      </div>
+      <div class="equip-card" style="border-color:var(--gold);">
+        <div style="font-size:24px; margin:8px 0;">🏹</div>
+        <div class="equip-slot">Bow (lvl 11)</div>
+        <div class="equip-name" style="color:var(--gold);">Warden Bow</div>
+        <div class="equip-mods">2 sockets + Storm Rune<br>(DPS upgrade ใหญ่)</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🌳 Passive Tree</div>
+    <div class="passive-note">
+      ใช้ Dexterity สำหรับ small nodes · Ascendancy แรก: <strong style="color:var(--lightning)">Gathering Winds</strong>
+    </div>
+  </div>
+
+  <!-- ===== TAB 3: LVL 15-27 ===== -->
+  <div id="t3" class="tab-panel">
+    <div class="section-title">⚔️ Skills &amp; Gems</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif" alt="Lightning Arrow">
+        <div class="skill-name">Lightning Arrow</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif" alt="">Rapid Attacks I</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">Lightning Attunement</div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif" alt="Lightning Rod">
+        <div class="skill-name">Lightning Rod</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">Lightning Attunement</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif" alt="">Elemental Armament I</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Herald of Thunder">
+        <div class="skill-name">Herald of Thunder</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif" alt="">Elemental Armament I</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+        </div>
+        <span class="skill-tag tag-utility">Buff</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Barrage">
+        <div class="skill-name">Barrage</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.avif" alt="">Cooldown Recovery I</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss Burst</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Electrocuting Arrow">
+        <div class="skill-name">Electrocuting Arrow</div>
+        <span class="skill-tag tag-utility">Utility</span>
+      </div>
+      <div class="skill-row" style="border-color:rgba(200,169,110,0.4);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Voltaic Mark">
+        <div class="skill-name">Voltaic Mark <span style="font-size:11px;color:var(--gold);">⭐ ใหม่</span></div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp" alt="">Mark of Siphoning</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp" alt="">Prolonged Duration I</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss Mark</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">📋 คำแนะนำ</div>
+    <div class="notes-box">
+      <div class="note-item"><span>ที่ lvl 11 ให้หา <span class="item">Warden Bow</span> 2 sockets — ใช้ currency craft ได้แต่เก็บส่วนใหญ่ไว้ทำ bow ที่ <span class="highlight">lvl 28</span></span></div>
+      <div class="note-item"><span>Flat damage ยังสำคัญแต่ไม่ critical เท่า Act 1 แล้ว</span></div>
+      <div class="note-item"><span>รองเท้า Movement Speed ยังสำคัญเสมอ — ต่อให้ stats อื่นต่ำ ก็ยังเก็บไว้</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🌳 Passive Tree</div>
+    <div class="passive-note">
+      Ascendancy แรก: <strong style="color:var(--lightning)">Gathering Winds</strong> · ใช้ Dexterity สำหรับ small nodes ทั่วไป
+    </div>
+  </div>
+
+  <!-- ===== TAB 4: LVL 28-40 ===== -->
+  <div id="t4" class="tab-panel">
+    <div class="section-title">⚔️ Skills &amp; Gems</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif" alt="Lightning Arrow">
+        <div class="skill-name">Lightning Arrow</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">Lightning Attunement</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.avif" alt="">Innervate</div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif" alt="Lightning Rod">
+        <div class="skill-name">Lightning Rod</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp" alt="">Lightning Attunement</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp" alt="">Multishot II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Herald of Thunder">
+        <div class="skill-name">Herald of Thunder</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.avif" alt="">Elemental Focus</div>
+        </div>
+        <span class="skill-tag tag-utility">Buff</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Barrage">
+        <div class="skill-name">Barrage</div>
+        <div class="support-chips"><span class="plus">+</span><div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.avif" alt="">Cooldown Recovery I</div></div>
+        <span class="skill-tag tag-boss">Boss Burst</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Wind Dancer">
+        <div class="skill-name">Wind Dancer</div>
+        <div class="support-chips"><span class="plus">+</span><div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp" alt="">Knockback</div></div>
+        <span class="skill-tag tag-utility">Defense</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Voltaic Mark">
+        <div class="skill-name">Voltaic Mark</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp" alt="">Mark of Siphoning</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp" alt="">Prolonged Duration I</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss Mark</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">📋 คำแนะนำ</div>
+    <div class="notes-box">
+      <div class="note-item"><span class="warn">⚠️ สำคัญมาก!</span><span> ที่ lvl 28 ต้องเริ่มหา <span class="item">Dualstring Bow</span> จาก vendor — ใช้ currency craft ให้ได้ 5-6 mods + 2 sockets เป็น upgrade ใหญ่ที่สุดใน campaign</span></div>
+      <div class="note-item"><span>Socket priority: <span class="highlight">Rod > LA > Herald of Thunder</span></span></div>
+      <div class="note-item"><span>บน boss ให้ swap support gem ใน Lightning Rod เป็น boss version</span></div>
+      <div class="note-item"><span>เพิ่ม <span class="item">Thawing Charm</span> เพื่อป้องกัน Freeze</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🎒 Equipment</div>
+    <div class="equip-grid">
+      <div class="equip-card" style="border-color:var(--gold);">
+        <div style="font-size:24px; margin:8px 0;">🏹</div>
+        <div class="equip-slot">Bow ⭐ Priority</div>
+        <div class="equip-name" style="color:var(--gold);">Dualstring Bow</div>
+        <div class="equip-mods">5-6 mods + 2 sockets<br>craft ด้วย currency</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif" alt="">
+        <div class="equip-slot">Boots</div>
+        <div class="equip-name">Movement Speed</div>
+        <div class="equip-mods">ยังต้องมี MS เสมอ</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif" alt="">
+        <div class="equip-slot">Gloves</div>
+        <div class="equip-name">Flat Dmg Gloves</div>
+        <div class="equip-mods">Flat damage to Attacks</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif" alt="">
+        <div class="equip-slot">Ring x2</div>
+        <div class="equip-name">Ruby / Topaz Ring</div>
+        <div class="equip-mods">Flat dmg + Life/Resist</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🌳 Passive Tree</div>
+    <div class="passive-note">
+      Ascendancy ถัดไป: <strong style="color:var(--lightning)">Point Blank</strong> · ใช้ Dexterity สำหรับ small nodes
+    </div>
+  </div>
+
+  <!-- ===== TAB 5: LVL 40-60+ ===== -->
+  <div id="t5" class="tab-panel">
+    <div class="section-title">⚔️ Skills &amp; Gems</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif" alt="Lightning Arrow">
+        <div class="skill-name">Lightning Arrow</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.avif" alt="">Innervate</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+        </div>
+        <span class="skill-tag tag-clear">Main Clear</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif" alt="Lightning Rod">
+        <div class="skill-name">Lightning Rod</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp" alt="">Multishot II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss DPS</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Herald of Thunder">
+        <div class="skill-name">Herald of Thunder</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp" alt="">Concentrated Area</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.avif" alt="">Elemental Focus</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp" alt="">Elemental Armament II</div>
+        </div>
+        <span class="skill-tag tag-utility">Buff</span>
+      </div>
+      <div class="skill-row" style="border-color:rgba(200,169,110,0.4);">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Tornado Shot">
+        <div class="skill-name">Tornado Shot <span style="font-size:11px;color:var(--gold);">⭐ ใหม่</span></div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp" alt="">Prolonged Duration II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp" alt="">Overabundance I</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp" alt="">Rapid Attacks II</div>
+        </div>
+        <span class="skill-tag tag-clear">Clear AOE</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Wind Dancer">
+        <div class="skill-name">Wind Dancer</div>
+        <div class="support-chips"><span class="plus">+</span><div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp" alt="">Knockback</div></div>
+        <span class="skill-tag tag-utility">Defense</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Voltaic Mark">
+        <div class="skill-name">Voltaic Mark</div>
+        <div class="support-chips">
+          <span class="plus">+</span>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp" alt="">Mark of Siphoning II</div>
+          <div class="support-chip"><img class="gem-icon small" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp" alt="">Prolonged Duration II</div>
+        </div>
+        <span class="skill-tag tag-boss">Boss Mark</span>
+      </div>
+      <div class="skill-row">
+        <img class="gem-icon" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif" alt="Barrage">
+        <div class="skill-name">Barrage</div>
+        <span class="skill-tag tag-boss">Boss Burst</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">📋 คำแนะนำ</div>
+    <div class="notes-box">
+      <div class="note-item"><span>ใช้ <span class="item">Dualstring Bow</span> ต่อ แล้วเปลี่ยนเป็น <span class="item">Highpoint Bow</span> ที่ <span class="highlight">lvl 55</span></span></div>
+      <div class="note-item"><span><span class="item">Tornado Shot</span> เพิ่มมาเป็น clear skill — duration 25 วินาที set แล้วลืมได้เลย</span></div>
+      <div class="note-item"><span>Socket priority: <span class="highlight">Rod > LA > Herald of Thunder</span></span></div>
+      <div class="note-item"><span>เริ่มใส่ full gear: focus Life + Resistances ให้ครบ</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🎒 Equipment</div>
+    <div class="equip-grid">
+      <div class="equip-card" style="border-color:var(--gold);">
+        <div style="font-size:24px; margin:8px 0;">🏹</div>
+        <div class="equip-slot">Bow</div>
+        <div class="equip-name" style="color:var(--gold);">Dualstring → Highpoint (55)</div>
+        <div class="equip-mods">เปลี่ยนที่ lvl 55</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyArmour01.avif" onerror="this.style.display='none'" alt="">
+        <div class="equip-slot">Body</div>
+        <div class="equip-name">Hunting Coat</div>
+        <div class="equip-mods">+Cold/Fire Resist + Evasion</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr01.avif" onerror="this.style.display='none'" alt="">
+        <div class="equip-slot">Helmet</div>
+        <div class="equip-name">Felt Cap</div>
+        <div class="equip-mods">+Fire Resist + max Life</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif" alt="">
+        <div class="equip-slot">Boots</div>
+        <div class="equip-name">MS Boots</div>
+        <div class="equip-mods">MS + Resist</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif" alt="">
+        <div class="equip-slot">Gloves</div>
+        <div class="equip-name">Rare Gloves</div>
+        <div class="equip-mods">Flat dmg + Resist</div>
+      </div>
+      <div class="equip-card">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/AmuletStr01.avif" onerror="this.style.display='none'" alt="">
+        <div class="equip-slot">Amulet</div>
+        <div class="equip-name">Stellar Amulet</div>
+        <div class="equip-mods">Life / Resist / Dex</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">🌳 Passive Tree</div>
+    <div class="passive-note">
+      Ascendancy: <strong style="color:var(--lightning)">Gathering Winds → Point Blank → Endless Munitions</strong>
+    </div>
+  </div>
+
+  <!-- ===== TAB 6: TWINK UNIQUES ===== -->
+  <div id="t6" class="tab-panel">
+    <div class="notes-box" style="margin-bottom:16px;">
+      <div class="note-item"><span>Tab นี้แสดง Unique items ที่ใช้เร่ง leveling — Skills ยังเหมือน Tab อื่นๆ</span></div>
+      <div class="note-item"><span><span class="item">Quiver</span> สำคัญมากสำหรับ damage — ต้องการ damage to attacks + increased bow damage</span></div>
+      <div class="note-item"><span><span class="warn">Blackheart rings</span> ดีเฉพาะ Act 1 เท่านั้น — swap ออก Act 2-3</span></div>
+      <div class="note-item"><span>Unique quiver สามารถ swap ออกได้เร็ว แต่ดีช่วงต้น</span></div>
+    </div>
+
+    <div class="section-title">💎 Twink Unique Items</div>
+    <div class="equip-grid">
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Uniques/blackheart.avif" alt="Blackheart">
+        <div class="equip-slot">Ring x2</div>
+        <div class="equip-name">Blackheart</div>
+        <div class="equip-mods"><span style="color:var(--red);">Act 1 เท่านั้น!</span></div>
+      </div>
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Uniques/surefootedsigil.avif" alt="Surefooted Sigil">
+        <div class="equip-slot">Amulet</div>
+        <div class="equip-name">Surefooted Sigil</div>
+        <div class="equip-mods">Movement &amp; Defense</div>
+      </div>
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/MeginordsGirdle.avif" alt="Meginord's Girdle">
+        <div class="equip-slot">Belt</div>
+        <div class="equip-name">Meginord's Girdle</div>
+        <div class="equip-mods">Str + Physical Damage</div>
+      </div>
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Uniques/Foxform.avif" alt="Foxshade">
+        <div class="equip-slot">Body</div>
+        <div class="equip-name">Foxshade</div>
+        <div class="equip-mods">Evasion + Crit Avoidance</div>
+      </div>
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Uniques/wanderlust.avif" alt="Wanderlust">
+        <div class="equip-slot">Boots</div>
+        <div class="equip-name">Wanderlust</div>
+        <div class="equip-mods">Movement Speed + Freeze Immune</div>
+      </div>
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Uniques/PaintersServant.avif" alt="Painter's Servant">
+        <div class="equip-slot">Gloves</div>
+        <div class="equip-name">Painter's Servant</div>
+        <div class="equip-mods">Flat Damage to Attacks</div>
+      </div>
+      <div class="equip-card is-unique">
+        <img class="equip-img" src="https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Uniques/thrillsteel.avif" alt="Thrillsteel">
+        <div class="equip-slot">Helmet</div>
+        <div class="equip-name">Thrillsteel</div>
+        <div class="equip-mods">Onslaught on Kill</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end tabs-container -->
+
+<footer>
+  สรุปจาก Fubgun's Lightning Arrow Deadeye Leveling Guide (v0.5) · mobalytics.gg · อัปเดต 29 พ.ค. 2026
+</footer>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

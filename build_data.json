@@ -1,0 +1,708 @@
+{
+  "lvl 1-5": {
+    "gems": [
+      {
+        "name": "Bow Shot",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/BowDefaultSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif",
+        "supports": []
+      },
+      {
+        "name": "Lightning Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportrapidattacksplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif"
+          },
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Lightning Rod",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.avif",
+        "supports": []
+      },
+      {
+        "name": "Contagion",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/WitchContagion.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WitchContagionSkillGem.avif",
+        "supports": []
+      },
+      {
+        "name": "Frost Bomb",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+        "supports": []
+      }
+    ],
+    "equipment": {
+      "boots": {
+        "name": "Straw Sandals",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "10% increased Movement Speed"
+        ]
+      },
+      "gloves": {
+        "name": "Torn Gloves",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 1 to 3 Cold damage to Attacks"
+        ]
+      },
+      "leftRing": {
+        "name": "Iron Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 2 to 3 Physical Damage to Attacks"
+        ]
+      },
+      "rightRing": {
+        "name": "Iron Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 1 to 6 Lightning damage to Attacks"
+        ]
+      }
+    }
+  },
+  "lvl 6-14": {
+    "gems": [
+      {
+        "name": "Lightning Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportrapidattacksplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif"
+          },
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Lightning Rod",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportelementalarmamentplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+          },
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Frost Bomb",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.avif",
+        "supports": []
+      },
+      {
+        "name": "Herald of Thunder",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportelementalarmamentplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportconcentratedareaplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Barrage",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportcooldownrecoveryplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Electrocuting Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerElectrocutingRodSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElectrocutingRodSkillGem.webp",
+        "supports": []
+      }
+    ],
+    "equipment": {
+      "boots": {
+        "name": "Straw Sandals",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "10% increased Movement Speed"
+        ]
+      },
+      "gloves": {
+        "name": "Torn Gloves",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 1 to 3 Cold damage to Attacks"
+        ]
+      },
+      "leftRing": {
+        "name": "Iron Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 2 to 3 Physical Damage to Attacks"
+        ]
+      },
+      "rightRing": {
+        "name": "Iron Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 1 to 6 Lightning damage to Attacks"
+        ]
+      }
+    }
+  },
+  "lvl 15-27": {
+    "gems": [
+      {
+        "name": "Lightning Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportrapidattacksplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.avif"
+          },
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Lightning Rod",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.avif"
+          },
+          {
+            "slug": "supportelementalarmamentplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Herald of Thunder",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportelementalarmamentplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportconcentratedareaplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Barrage",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportcooldownrecoveryplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Electrocuting Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerElectrocutingRodSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElectrocutingRodSkillGem.webp",
+        "supports": []
+      },
+      {
+        "name": "Voltaic Mark",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/ShockingMarkSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingMarkSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportmarkofsiphoningplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp"
+          },
+          {
+            "slug": "prolongeddurationsupportplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+          }
+        ]
+      }
+    ],
+    "equipment": {
+      "boots": {
+        "name": "Straw Sandals",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "10% increased Movement Speed"
+        ]
+      },
+      "gloves": {
+        "name": "Torn Gloves",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 1 to 3 Cold damage to Attacks"
+        ]
+      },
+      "leftRing": {
+        "name": "Ruby Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 2 to 3 Physical Damage to Attacks",
+          "Adds 1 to 15 Lightning damage to Attacks"
+        ]
+      },
+      "rightRing": {
+        "name": "Topaz Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/TopazRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 8 to 13 Fire damage to Attacks",
+          "Adds 1 to 6 Lightning damage to Attacks"
+        ]
+      }
+    }
+  },
+  "lvl 28-40": {
+    "gems": [
+      {
+        "name": "Lightning Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportrapidattacksplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+          },
+          {
+            "slug": "supportinnervateplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Lightning Rod",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportelementalarmamentplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportaddedlightningdamageplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/AddedLightningDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportmultishotplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Herald of Thunder",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportconcentratedareaplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+          },
+          {
+            "slug": "supportelementalarmamentplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportelementalfocusplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Barrage",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.avif",
+        "supports": [
+          {
+            "slug": "supportcooldownrecoveryplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.avif"
+          }
+        ]
+      },
+      {
+        "name": "Wind Dancer",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportknockbackplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Electrocuting Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerElectrocutingRodSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElectrocutingRodSkillGem.webp",
+        "supports": []
+      },
+      {
+        "name": "Voltaic Mark",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/ShockingMarkSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingMarkSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportmarkofsiphoningplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp"
+          },
+          {
+            "slug": "prolongeddurationsupportplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+          }
+        ]
+      }
+    ],
+    "equipment": {
+      "boots": {
+        "name": "Straw Sandals",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "10% increased Movement Speed"
+        ]
+      },
+      "charm1": {
+        "name": "Thawing Charm",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.avif",
+        "isUnique": false,
+        "mods": []
+      },
+      "gloves": {
+        "name": "Torn Gloves",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 1 to 3 Cold damage to Attacks"
+        ]
+      },
+      "leftRing": {
+        "name": "Ruby Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 2 to 3 Physical Damage to Attacks",
+          "Adds 1 to 15 Lightning damage to Attacks"
+        ]
+      },
+      "rightRing": {
+        "name": "Topaz Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/TopazRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 8 to 13 Fire damage to Attacks",
+          "Adds 1 to 6 Lightning damage to Attacks"
+        ]
+      }
+    }
+  },
+  "lvl 40-60+": {
+    "gems": [
+      {
+        "name": "Lightning Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportrapidattacksplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+          },
+          {
+            "slug": "supportinnervateplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/InnervateSupportGem.webp"
+          },
+          {
+            "slug": "supportelementalarmamentplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Lightning Rod",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportconcentratedareaplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+          },
+          {
+            "slug": "supportelementalarmamentplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          },
+          {
+            "slug": "supportmultishotplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleProjectilesSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Herald of Thunder",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportconcentratedareaplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp"
+          },
+          {
+            "slug": "supportelementalfocusplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp"
+          },
+          {
+            "slug": "supportelementalarmamentplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Tornado Shot",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerTornadoShotSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TornadoShotSkillGem.webp",
+        "supports": [
+          {
+            "slug": "prolongeddurationsupportplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+          },
+          {
+            "slug": "supportincreaselimitplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp"
+          },
+          {
+            "slug": "supportrapidattacksplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Wind Dancer",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportknockbackplayer",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Electrocuting Arrow",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerElectrocutingRodSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ElectrocutingRodSkillGem.webp",
+        "supports": []
+      },
+      {
+        "name": "Voltaic Mark",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/ShockingMarkSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/ShockingMarkSkillGem.webp",
+        "supports": [
+          {
+            "slug": "supportmarkofsiphoningplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp"
+          },
+          {
+            "slug": "prolongeddurationsupportplayertwo",
+            "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp"
+          }
+        ]
+      },
+      {
+        "name": "Barrage",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+        "supports": []
+      }
+    ],
+    "equipment": {
+      "amulet": {
+        "name": "Stellar Amulet",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/StellarAmulet.avif",
+        "isUnique": false,
+        "mods": []
+      },
+      "belt": {
+        "name": "Mail Belt",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt07.avif",
+        "isUnique": false,
+        "mods": [
+          "+24 to Strength",
+          "+20% to Lightning Resistance",
+          "+39 to maximum Life"
+        ]
+      },
+      "body": {
+        "name": "Hunting Coat",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex03.avif",
+        "isUnique": false,
+        "mods": [
+          "+25% to Cold Resistance",
+          "+44 to Evasion Rating",
+          "50% increased Evasion Rating"
+        ]
+      },
+      "boots": {
+        "name": "Straw Sandals",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "+15% to Fire Resistance",
+          "+10% to Cold Resistance",
+          "+39 to maximum Life"
+        ]
+      },
+      "charm1": {
+        "name": "Thawing Charm",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.avif",
+        "isUnique": false,
+        "mods": []
+      },
+      "gloves": {
+        "name": "Torn Gloves",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.avif",
+        "isUnique": false,
+        "mods": [
+          "+30% to Fire Resistance",
+          "+15% to Lightning Resistance",
+          "Adds 8 to 14 Cold damage to Attacks"
+        ]
+      },
+      "helmet": {
+        "name": "Felt Cap",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.avif",
+        "isUnique": false,
+        "mods": [
+          "+20% to Fire Resistance",
+          "+39 to maximum Life",
+          "+93 to Evasion Rating"
+        ]
+      },
+      "leftRing": {
+        "name": "Ruby Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/RubyRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 2 to 3 Physical Damage to Attacks",
+          "Adds 1 to 15 Lightning damage to Attacks"
+        ]
+      },
+      "rightRing": {
+        "name": "Topaz Ring",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/TopazRing.avif",
+        "isUnique": false,
+        "mods": [
+          "Adds 8 to 13 Fire damage to Attacks",
+          "Adds 1 to 6 Lightning damage to Attacks"
+        ]
+      }
+    }
+  },
+  "Twink uniques": {
+    "gems": [
+      {
+        "name": "Bow Shot",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/BowDefaultSkill.avif",
+        "gemIcon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/BlankGem.avif",
+        "supports": []
+      }
+    ],
+    "equipment": {
+      "amulet": {
+        "name": "Surefooted Sigil",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Uniques/surefootedsigil.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "belt": {
+        "name": "Meginord's Girdle",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Uniques/MeginordsGirdle.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "body": {
+        "name": "Foxshade",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Uniques/Foxform.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "boots": {
+        "name": "Wanderlust",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Uniques/wanderlust.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "gloves": {
+        "name": "Painter's Servant",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Uniques/PaintersServant.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "helmet": {
+        "name": "Thrillsteel",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Uniques/thrillsteel.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "leftRing": {
+        "name": "Blackheart",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Uniques/blackheart.avif",
+        "isUnique": true,
+        "mods": []
+      },
+      "rightRing": {
+        "name": "Blackheart",
+        "icon": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Uniques/blackheart.avif",
+        "isUnique": true,
+        "mods": []
+      }
+    }
+  }
+}
