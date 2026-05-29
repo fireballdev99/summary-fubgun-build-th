@@ -94,50 +94,69 @@
 
   /* OVERVIEW */
   .overview {
-    max-width: 900px; margin: 24px auto; padding: 0 16px;
+    max-width: 980px; margin: 24px auto; padding: 0 20px;
   }
   .overview-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
   .overview-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 16px;
+    padding: 18px 20px;
   }
+  .overview-card.full-width { grid-column: 1 / -1; }
   .overview-card h3 {
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     color: var(--lightning);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
   }
   .tip-list { list-style: none; }
   .tip-list li {
-    padding: 4px 0;
-    font-size: 14px;
-    display: flex; align-items: flex-start; gap: 8px;
+    padding: 5px 0;
+    font-size: 15px;
+    line-height: 1.7;
+    display: flex; align-items: baseline; gap: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
   }
-  .tip-list li::before { content: '›'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+  .tip-list li:last-child { border-bottom: none; }
+  .tip-list li::before { content: '›'; color: var(--gold); flex-shrink: 0; font-size: 18px; line-height: 1.4; }
   .highlight { color: var(--gold); font-weight: 600; }
   .highlight-blue { color: var(--lightning); font-weight: 600; }
   .highlight-green { color: var(--green); font-weight: 600; }
   .highlight-red { color: var(--red); font-weight: 600; }
 
-  .asc-chain {
-    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  /* Ascendancy vertical chain */
+  .asc-chain { display: flex; flex-direction: column; gap: 2px; }
+  .asc-step {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .asc-num {
+    width: 24px; height: 24px;
+    background: rgba(124,200,255,0.15);
+    border: 1px solid rgba(124,200,255,0.3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    color: var(--lightning);
+    flex-shrink: 0;
   }
   .asc-node {
-    background: rgba(124,200,255,0.1);
-    border: 1px solid rgba(124,200,255,0.3);
+    background: rgba(124,200,255,0.08);
+    border: 1px solid rgba(124,200,255,0.25);
     border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 13px;
+    padding: 5px 14px;
+    font-size: 14px;
     color: var(--lightning2);
     font-weight: 600;
   }
+  .asc-down { color: rgba(124,200,255,0.4); font-size: 18px; padding-left: 11px; line-height: 1; }
   .asc-arrow { color: var(--gold); font-size: 16px; }
 
   .regex-box {
@@ -156,7 +175,7 @@
 
   /* TABS */
   .tabs-container {
-    max-width: 900px; margin: 24px auto 0; padding: 0 16px;
+    max-width: 980px; margin: 24px auto 0; padding: 0 20px;
   }
   .tab-nav {
     display: flex; gap: 4px; flex-wrap: wrap;
@@ -366,19 +385,28 @@
   }
 
   /* BOSS ORDER */
-  .boss-chain {
-    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-    margin-top: 8px;
+  .boss-chain { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
+  .boss-step { display: flex; align-items: center; gap: 10px; }
+  .boss-num {
+    width: 24px; height: 24px;
+    background: rgba(224,80,80,0.15);
+    border: 1px solid rgba(224,80,80,0.3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    color: #e08888;
+    flex-shrink: 0;
   }
   .boss-node {
-    background: rgba(224,80,80,0.1);
-    border: 1px solid rgba(224,80,80,0.3);
+    background: rgba(224,80,80,0.08);
+    border: 1px solid rgba(224,80,80,0.25);
     border-radius: 6px;
-    padding: 4px 12px;
-    font-size: 13px;
-    color: #e08888;
+    padding: 5px 14px;
+    font-size: 14px;
+    color: #e09090;
     font-weight: 600;
   }
+  .boss-down { color: rgba(224,80,80,0.35); font-size: 18px; padding-left: 11px; line-height: 1; }
   .boss-arrow { color: var(--muted); }
 
   footer {
@@ -418,11 +446,20 @@
     <div class="overview-card">
       <h3>⚡ Ascendancy (ตามลำดับ)</h3>
       <div class="asc-chain">
-        <div class="asc-node">Gathering Winds</div>
-        <div class="asc-arrow">→</div>
-        <div class="asc-node">Point Blank</div>
-        <div class="asc-arrow">→</div>
-        <div class="asc-node">Endless Munitions</div>
+        <div class="asc-step">
+          <div class="asc-num">1</div>
+          <div class="asc-node">Gathering Winds</div>
+        </div>
+        <div class="asc-down">↓</div>
+        <div class="asc-step">
+          <div class="asc-num">2</div>
+          <div class="asc-node">Point Blank</div>
+        </div>
+        <div class="asc-down">↓</div>
+        <div class="asc-step">
+          <div class="asc-num">3</div>
+          <div class="asc-node">Endless Munitions</div>
+        </div>
       </div>
     </div>
 
@@ -430,13 +467,25 @@
     <div class="overview-card">
       <h3>💀 ลำดับ Boss (Act 1)</h3>
       <div class="boss-chain">
-        <div class="boss-node">Devourer</div>
-        <div class="boss-arrow">→</div>
-        <div class="boss-node">Cold Witch</div>
-        <div class="boss-arrow">→</div>
-        <div class="boss-node">Hut Witch</div>
-        <div class="boss-arrow">→</div>
-        <div class="boss-node">Rust King</div>
+        <div class="boss-step">
+          <div class="boss-num">1</div>
+          <div class="boss-node">Devourer</div>
+        </div>
+        <div class="boss-down">↓</div>
+        <div class="boss-step">
+          <div class="boss-num">2</div>
+          <div class="boss-node">Cold Witch</div>
+        </div>
+        <div class="boss-down">↓</div>
+        <div class="boss-step">
+          <div class="boss-num">3</div>
+          <div class="boss-node">Hut Witch</div>
+        </div>
+        <div class="boss-down">↓</div>
+        <div class="boss-step">
+          <div class="boss-num">4</div>
+          <div class="boss-node">Rust King</div>
+        </div>
       </div>
     </div>
 
@@ -444,10 +493,10 @@
     <div class="overview-card">
       <h3>🎁 Quest Rewards ที่ต้องเลือก</h3>
       <ul class="tip-list">
-        <li><span><span class="highlight">Act 2</span> — Charm recharge</span></li>
-        <li><span><span class="highlight">Act 3</span> — Stun threshold (Venom reward)</span></li>
-        <li><span><span class="highlight">Act 4</span> — Tattoos: lightning / int / fire resist</span></li>
-        <li><span><span class="highlight">Interlude</span> — Boon: movement speed</span></li>
+        <li><span class="highlight">Act 2</span> — Charm recharge</li>
+        <li><span class="highlight">Act 3</span> — Stun threshold (Venom reward)</li>
+        <li><span class="highlight">Act 4</span> — Tattoos: lightning / int / fire resist</li>
+        <li><span class="highlight">Interlude</span> — Boon: movement speed</li>
       </ul>
     </div>
 
@@ -455,16 +504,16 @@
     <div class="overview-card">
       <h3>💡 Tips สำคัญตลอด Campaign</h3>
       <ul class="tip-list">
-        <li>Salvage อาวุธที่มี quality ทุกชิ้น → ได้ Whetstone</li>
-        <li>Salvage ของที่มี socket → ได้ Artificer's Orb</li>
+        <li>Salvage อาวุธที่มี quality ทุกชิ้น → ได้ <strong>Whetstone</strong></li>
+        <li>Salvage ของที่มี socket → ได้ <strong>Artificer's Orb</strong></li>
         <li>รองเท้า <span class="highlight">Movement Speed</span> — ห้ามถอดเด็ดขาด</li>
-        <li><span class="highlight">Flat damage to attacks</span> บน ถุงมือ+แหวน = สำคัญที่สุด</li>
-        <li>Vendor ของ rare ทั้งหมดเพื่อสะสม gold → Gamble ใน Act 2-3</li>
+        <li><span class="highlight">Flat damage to attacks</span> บนถุงมือ + แหวน คือ stat สำคัญที่สุด</li>
+        <li>Vendor ของ rare ทั้งหมดเอาเป็น gold แล้ว Gamble ใน Act 2-3</li>
       </ul>
     </div>
 
     <!-- Vendor Regex -->
-    <div class="overview-card" style="grid-column: 1 / -1;">
+    <div class="overview-card full-width">
       <h3>🔍 Vendor Regex (copy ใส่ช่อง search ใน vendor)</h3>
       <div class="regex-box" title="คลิกเพื่อ copy" onclick="navigator.clipboard.writeText(this.dataset.text); this.textContent='✓ Copied!';" data-text='"!cros|crud"'>"!cros|crud"</div>
       <div class="regex-box" style="margin-top:6px;" onclick="navigator.clipboard.writeText(this.dataset.text); this.textContent='✓ Copied!';" data-text='"s: (am|ri|be|bow)|ovem|[egdl] to.at"'>"s: (am|ri|be|bow)|ovem|[egdl] to.at"</div>
