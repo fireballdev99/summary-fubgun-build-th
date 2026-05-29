@@ -1,0 +1,1884 @@
+{
+  "buildName": "0.5 Ice Shot Deadeye Leveling Guide",
+  "slug": "builds",
+  "documentId": "81b55ee3-4bd6-4939-86bb-b9e17968c1c3",
+  "variants": [
+    {
+      "id": "default-variant",
+      "title": "lvl 1-14",
+      "levelRange": "lvl 1-14",
+      "description": "",
+      "skillGems": [
+        {
+          "activeSkill": {
+            "name": "Lightning Arrow",
+            "gemSlug": "lightningarrowplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportrapidattacksplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Lightning Rod",
+            "gemSlug": "lightningrodplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Frost Bomb",
+            "gemSlug": "frostbombplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        },
+        {
+          "activeSkill": {
+            "name": "Herald of Thunder",
+            "gemSlug": "heraldofthunderplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Barrage",
+            "gemSlug": "barrageplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        },
+        {
+          "activeSkill": {
+            "name": "Ice-Tipped Arrows",
+            "gemSlug": "icetippedarrowsplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerShearingBoltsSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        },
+        {
+          "activeSkill": {
+            "name": "Pounce",
+            "gemSlug": "wolfpounceplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidWolfLeapAttack.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WolfLeapAttackSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        }
+      ],
+      "equipment": {
+        "helmet": {
+          "name": "Felt Cap",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+          "slug": "armour-fourhelmetdex2",
+          "explicitDescriptions": [
+            "+8 to Dexterity",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "body": {
+          "name": "Leather Vest",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.webp",
+          "slug": "armour-fourbodydex1",
+          "explicitDescriptions": [
+            "+10% to Fire Resistance",
+            "+10% to Cold Resistance",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "gloves": {
+          "name": "Bound Bracers",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+          "slug": "armour-fourglovesdex3",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "boots": {
+          "name": "Embossed Boots",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+          "slug": "armour-fourbootsdex3",
+          "explicitDescriptions": [
+            "10% increased Movement Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "belt": {
+          "name": "Rawhide Belt",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.webp",
+          "slug": "armour-fourbelt1",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "amulet": {
+          "name": "Lapis Amulet",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+          "slug": "amulet-fouramulet5",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "leftRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Fire damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "rightRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 6 Lightning damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "flask1": {
+          "name": "Greater Life Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+          "slug": "flask-fourflasklife3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "flask2": {
+          "name": "Greater Mana Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+          "slug": "flask-fourflaskmana3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "charm1": {
+          "name": "Sapphire Charm",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/SapphireCharm.webp",
+          "slug": "flask-fourcharm9",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "mainHand.set1": {
+          "name": "Warden Bow",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow03.webp",
+          "slug": "weapon-fourbow3",
+          "explicitDescriptions": [
+            "Adds 1 to 6 Lightning Damage",
+            "49% increased Physical Damage",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "offHand.set1": {
+          "name": "Broadhead Quiver",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+          "slug": "quiver-fourquiver1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "+1 to Level of all Projectile Skills"
+          ],
+          "implicitDescriptions": []
+        }
+      },
+      "notes": {
+        "descriptionPoeEquipment": "Early boss kill order for a smooth experience:\nDevourer(Mud barrow) > cold witch(Clearfell) > hut witch(Grelwood) > rust king(red vale)\nIf you're more experience, feel free to skip devourer.\nEarly Support gem order:\n [Rapid Attacks I](LA) > [Elemental Armament I](LA) > [Concentrated Area](LR) > 2nd [Elemental Armament I]\nIn act 1 it's very important to have gear with flat damage to attacks (can be elemental or phys, just whatever gives you the highest dps). At lvl 11 you want to get a [Warden Bow], you're just looking for the highest DPS one you drop or buy from the vendor. You're not looking to use any resources on this bow, as you want to make a 6 mod [Recurve Bow] at lvl 16 with 2 sockets. So save your artificers orb, exalts, regals and alchemy orbs.\nRemember to get a [Shortbow] in Red Vale and reach lvl 5 before fighting rust king. Trans/aug both your bow/quiver whenever you acquire them.\nFlask: Remember to constantly upgrade your life/mana flask throughout campaign, you can always buy a new one at the vendor when you meet the lvl requirements for the next tier (lvl 10, 16, 23, 30, 40, 50 and 60).\nQuiver: One with +lvls and high amount of flat damage, the base isn't too important.\nAlso look at the vendor in town every 1-2 lvls for flat damage gloves, every source of flat damage for the build is massive in act 1 and act 2.\nBoots: Movement speed on boots is also extremely good if you can find them, try to search the vendor every 1-2 lvls. I would never swap out movement speed boots, only replace them with other boots that have movement speed.\nOther gear: \nIdeally you should stick to evasion or evasion/es hybrid gear, but use whatever looks best at the time.\nHelmet/belt/amulet are good slots to acquire attributes (str on belt, dex or int on helmet).\nBesides that you're just looking for life/resist on gear, but flat damage is the most important on gloves/rings. High evasion chest is also quite good for defense if you find one.\n!!!!Important!!!!!\nAlways salvage weapons with quality for whetstones and always salvage items with sockets for artificers orb, this is extremely important for gear upgrades throughout the campaign.\nI also personally prefer to vendor all rares for gold to gamble in act 3 or act 4 for better gear.",
+        "descriptionPoeSkillGems": "Early boss kill order for a smooth experience:\nDevourer(Mud barrow) > cold witch(Clearfell) > hut witch(Grelwood) > rust king(red vale)\nGrab [Rapid Attacks I] after killing devourer and [Elemental Armament I] after hut witch.\nEarly Support gem order:\n [Rapid Attacks I] > [Elemental Armament I] > [Concentrated Area] > 2nd [Elemental Armament I]\nEarly on when you lack support gems, you'll have to gem swap [Elemental Armament I] from lightning arrow to lightning rod on bosses, this is very important for boss damage. Or if you lack the strength requirement to use 2 at the same time.\nGet [Lightning Rod] first and than [Frost Bomb] (should have both before devourer/cold witch, there's a chest in clearfell that always drops a lvl 1 skill gem).\n[Herald of Thunder] is your still your ideal spirit gem because you can't swap to [Ice Shot] until lvl 31 and by than you'll have another spirit gem for [Herald of Ice].\n[Pounce] is used for mobility, grab it when you get a spare skill gem. I tend to drop it mid act 2 or act 3, as you run out of skill slots. You do need a talisman in your offhand for this to work, which is easy to find (use a low level one for low strength requirement). But this optional, can skip if you want less buttons.\n---important!!!!\nBecause we're doing a mini skill swap at lvl 24, you'll need to save some uncut skill gems/supports for later. Do not use ANY lvl 6 or lvl 7 uncut gems before the swap.",
+        "descriptionPoe2PassiveTree": "Take whatever attribute you need at the time, you'll default to dex if you don't need anything. You should also lookout for good attribute amulets or a strength belt to help out with requirements later on.\nAscendancy order:\n[Projectile Proximity Specialisation](point blank) -> [Endless Munitions] -> [Gathering Winds]"
+      }
+    },
+    {
+      "id": "1",
+      "title": "lvl 15-23",
+      "levelRange": "lvl 15-23",
+      "description": "",
+      "skillGems": [
+        {
+          "activeSkill": {
+            "name": "Lightning Arrow",
+            "gemSlug": "lightningarrowplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportrapidattacksplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Lightning Rod",
+            "gemSlug": "lightningrodplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerLightningRodRainSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Frost Bomb",
+            "gemSlug": "frostbombplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        },
+        {
+          "activeSkill": {
+            "name": "Herald of Thunder",
+            "gemSlug": "heraldofthunderplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Barrage",
+            "gemSlug": "barrageplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        },
+        {
+          "activeSkill": {
+            "name": "Ice-Tipped Arrows",
+            "gemSlug": "icetippedarrowsplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerShearingBoltsSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Pounce",
+            "gemSlug": "wolfpounceplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/DruidWolfLeapAttack.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WolfLeapAttackSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        }
+      ],
+      "equipment": {
+        "helmet": {
+          "name": "Felt Cap",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+          "slug": "armour-fourhelmetdex2",
+          "explicitDescriptions": [
+            "+8 to Dexterity",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "gloves": {
+          "name": "Bound Bracers",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+          "slug": "armour-fourglovesdex3",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "boots": {
+          "name": "Embossed Boots",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+          "slug": "armour-fourbootsdex3",
+          "explicitDescriptions": [
+            "10% increased Movement Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "belt": {
+          "name": "Rawhide Belt",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.webp",
+          "slug": "armour-fourbelt1",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "amulet": {
+          "name": "Lapis Amulet",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+          "slug": "amulet-fouramulet5",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "leftRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Fire damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "rightRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 6 Lightning damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "flask1": {
+          "name": "Greater Life Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+          "slug": "flask-fourflasklife3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "flask2": {
+          "name": "Greater Mana Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+          "slug": "flask-fourflaskmana3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "charm1": {
+          "name": "Sapphire Charm",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/SapphireCharm.webp",
+          "slug": "flask-fourcharm9",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "mainHand.set1": {
+          "name": "Recurve Bow",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow04.webp",
+          "slug": "weapon-fourbow4",
+          "explicitDescriptions": [
+            "Adds 1 to 6 Lightning Damage",
+            "49% increased Physical Damage",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "offHand.set1": {
+          "name": "Broadhead Quiver",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+          "slug": "quiver-fourquiver1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "+1 to Level of all Projectile Skills"
+          ],
+          "implicitDescriptions": []
+        }
+      },
+      "notes": {
+        "descriptionPoeEquipment": "Bow: Once you reach lvl 16, you want to make a good [Recurve Bow]. This weapon will last until lvl 33, so go all in with supplies. Alchemy/regal/exalt until it's 6 mod. Try a few different bases with transmute/aug, if you get a high tier prefix, regal and triple exalt slam (or use a essence instead of regal if you found one).\nBow lvl upgrades: lvl 16 for [Recurve Bow], ilvl 33 for Tier 6 flat rolls (can be [Dualstring Bow] or [Cultist Bow], while this isn't a chaos build, cultist bow has good dps). Make sure the item is ilvl 33 before crafting on it, (hold down alt on the item). And finally lvl 46 for both [Artillery Bow] and Tier 5 flat rolls (once again make sure it's ivl 46 before crafting on it). These are your 3 major bows for campaign and at each lvl you want to fully invest into these bows, make sure they're decent before exalt slamming/using artificer orb (just want high tier %phys or higher tier flat rolls).\nFlask: Remember to constantly upgrade your life/mana flask throughout campaign, you can always buy a new one at the vendor when you meet the lvl requirements for the next tier (lvl 10, 16, 23, 30, 40, 50 and 60).\nQuiver: one with +lvls and high amount of flat damage, the base isn't too important.\nAlso look at the vendor in town every 1-2 lvls for flat damage gloves, every source of flat damage for the build is massive in act 1 and act 2.\nBoots: Movement speed on boots is also extremely good if you can find them, try to search the vendor every 1-2 lvls. I would never swap out movement speed boots, only replace them with other boots that have movement speed.\nOther gear: \nIdeally you should stick to evasion or evasion/es hybrid gear, but use whatever looks best at the time.\nHelmet/belt/amulet are good slots to acquire attributes (str on belt, dex or int on helmet).\nBesides that you're just looking for life/resist on gear, but flat damage is the most important on gloves/rings. High evasion chest is also quite good for defense if you find one.\n!!!!Important!!!!!\nAlways salvage weapons with quality for whetstones and always salvage items with sockets for artificers orb, this is extremely important for gear upgrades throughout the campaign.\nI also personally prefer to vendor all rares for gold to gamble in act 3 or act 4 for better gear.",
+        "descriptionPoeSkillGems": "[Pounce] is used for mobility, grab it when you get a spare skill gem. I tend to drop it mid act 2 or act 3, as you run out of skill slots. You do need a talisman in your offhand for this to work, which is easy to find (use a low level one for low strength requirement).\n[Ice-Tipped Arrows] is a low priority for support gems. You can either use [Magnified Area I] or [Elemental Armament I], both are good and just depends what attributes you have at the time. Mag area is preferred though.\n---important!!!!\nBecause we're doing a mini skill swap at lvl 22, you'll need to save some uncut skill gems/supports for later. Do not use ANY lvl 6 or lvl 7 uncut gems before the swap. \nSave your first Lesser Jeweller's orb for [Snipe] (you swap to snipe at lvl 24) and save your 2nd for [Ice Shot](level 31)",
+        "descriptionPoe2PassiveTree": "Take whatever attribute you need at the time, you'll default to dex if you don't need anything. You should also lookout for good attribute amulets or a strength belt to help out with requirements later on.\nAscendancy order:\n[Projectile Proximity Specialisation](point blank) -> [Endless Munitions] -> [Gathering Winds]"
+      }
+    },
+    {
+      "id": "2",
+      "title": "lvl 24-30",
+      "levelRange": "lvl 24-30",
+      "description": "",
+      "skillGems": [
+        {
+          "activeSkill": {
+            "name": "Lightning Arrow",
+            "gemSlug": "lightningarrowplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerLightningArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/LightningArrowSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportrapidattacksplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Snipe",
+            "gemSlug": "snipeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerSnipeSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportwindowofopportunityplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Freezing Mark",
+            "gemSlug": "freezingmarkplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/FreezingMarkSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FreezingMarkSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "prolongeddurationsupportplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Herald of Thunder",
+            "gemSlug": "heraldofthunderplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofThunderSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Barrage",
+            "gemSlug": "barrageplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        },
+        {
+          "activeSkill": {
+            "name": "Ice-Tipped Arrows",
+            "gemSlug": "icetippedarrowsplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerShearingBoltsSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Freezing Salvo",
+            "gemSlug": "freezingsalvoplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerFreezingSalvoSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerFreezingSalvoSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportfreezeplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/HypothermiaSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Frost Bomb",
+            "gemSlug": "frostbombplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FrostBombSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        }
+      ],
+      "equipment": {
+        "helmet": {
+          "name": "Felt Cap",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+          "slug": "armour-fourhelmetdex2",
+          "explicitDescriptions": [
+            "+8 to Dexterity",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "gloves": {
+          "name": "Bound Bracers",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+          "slug": "armour-fourglovesdex3",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "boots": {
+          "name": "Embossed Boots",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+          "slug": "armour-fourbootsdex3",
+          "explicitDescriptions": [
+            "10% increased Movement Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "belt": {
+          "name": "Rawhide Belt",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.webp",
+          "slug": "armour-fourbelt1",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "amulet": {
+          "name": "Lapis Amulet",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+          "slug": "amulet-fouramulet5",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "leftRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Fire damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "rightRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 6 Lightning damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "flask1": {
+          "name": "Greater Life Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+          "slug": "flask-fourflasklife3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "flask2": {
+          "name": "Greater Mana Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+          "slug": "flask-fourflaskmana3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "charm1": {
+          "name": "Thawing Charm",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.webp",
+          "slug": "flask-fourcharm1",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "mainHand.set1": {
+          "name": "Recurve Bow",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow04.webp",
+          "slug": "weapon-fourbow4",
+          "explicitDescriptions": [
+            "Adds 1 to 6 Lightning Damage",
+            "49% increased Physical Damage",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "offHand.set1": {
+          "name": "Broadhead Quiver",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+          "slug": "quiver-fourquiver1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "+1 to Level of all Projectile Skills"
+          ],
+          "implicitDescriptions": []
+        }
+      },
+      "notes": {
+        "descriptionPoeEquipment": "Bow: Once you reach lvl 16, you want to make a good [Recurve Bow]. This weapon will last until lvl 33, so go all in with supplies. Alchemy/regal/exalt until it's 6 mod. Try a few different bases with transmute/aug, if you get a high tier prefix, regal and triple exalt slam (or use a essence instead of regal if you found one).\nBow lvl upgrades: lvl 16 for [Recurve Bow], ilvl 33 for Tier 6 flat rolls (can be [Dualstring Bow] or [Cultist Bow], while this isn't a chaos build, cultist bow has good dps). Make sure the item is ilvl 33 before crafting on it, (hold down alt on the item). And finally lvl 46 for both [Artillery Bow] and Tier 5 flat rolls (once again make sure it's ivl 46 before crafting on it). These are your 3 major bows for campaign and at each lvl you want to fully invest into these bows, make sure they're decent before exalt slamming/using artificer orb (just want high tier %phys or higher tier flat rolls).\nFlask: Remember to constantly upgrade your life/mana flask throughout campaign, you can always buy a new one at the vendor when you meet the lvl requirements for the next tier (lvl 10, 16, 23, 30, 40, 50 and 60).\nQuiver: One with +lvls and high amount of flat damage, the base isn't too important.\nBoots: Movement speed on boots is also extremely good if you can find them, try to search the vendor every 1-2 lvls. I would never swap out movement speed boots, only replace them with other boots that have movement speed.\nOther gear: \nIdeally you should stick to evasion or evasion/es hybrid gear, but use whatever looks best at the time.\nHelmet/belt/amulet are good slots to acquire attributes (str on belt, dex or int on helmet).\nBesides that you're just looking for life/resist on gear, but flat damage is the most important on gloves/rings. High evasion chest is also quite good for defense if you find one.\n!!!!Important!!!!!\nAlways salvage weapons with quality for whetstones and always salvage items with sockets for artificers orb, this is extremely important for gear upgrades throughout the campaign.\nI also personally prefer to vendor all rares for gold to gamble in act 3 or act 4 for better gear.",
+        "descriptionPoeSkillGems": "Lesser Jeweller's orb priority - [Snipe] -> [Ice Shot] -> [Freezing Mark] -> [Herald of Ice]\nQuality Priority - [Freezing Mark] -> [Herald of Ice] -> [Snipe]\nThis is the only big swap in campaign (at lvl 31 you'll swap [Lightning Arrow] for [Ice Shot]). While it is a bit of buttons at first, it's not that bad once you know what you're doing.\nThis swap requires at least 3 skill gems (one lvl 7 and two lvl 5 or 6 gems) and 4-5 support gems. So make sure you save these gems as you're lvling, you should usually have spare gems by lvl 24. Keep in mind the lvl 7 gem Has to be [Freezing Mark] and this skill is massive for freezing enemies, while giving a massive damage buff at the same time. If you have a 2nd lvl 7 gem, it should be [Snipe].\nAlways keep [Snipe] at the highest available gem lvl you have access to and get [Lightning Arrow] to lvl 7 (stop upgrading after, because you swap to [Ice Shot] once you unlock a lvl 9 gem in act 3).\n[Frost Bomb] Will only work if it's high enough lvl. At lvl 3 it'll affect enemies at lvl 25 or below, lvl 4 is 29 and lvl 5 is 32(So at lvl 5 it'll work for all of act 2). You'll drop this skill mid act 2 or start of act 3, as you'll lack the intelligence to keep lvling this skill, feel free to drop it when you swap to [Snipe] if you struggle with a lot of buttons.\nIf you feel like you're lacking freeze buildup, remember to constantly use [Ice-Tipped Arrows] as this activates [Hail]. You can also use [Escape Shot] to help with freeze buildup, but I never needed this in any of my runs.\nEssentially the goal is to freeze the boss, press [Barrage] into a perfect window [Snipe]. (if you struggle with Snipe, you can takeout [Window of Opportunity I] for  [Elemental Focus], but it's not that bad).\nBoss Rotation: use [Ice-Tipped Arrows] before the boss spawns, cast [Freezing Mark], shoot [Lightning Arrow] 3-4 times, cast [Freezing Salvo]. If the boss is not frozen, use escape shot/salvo till it's frozen. Once the boss is frozen, cast [Barrage] into [Snipe].\nFor general clear, I just use [Ice-Tipped Arrows], [Freezing Mark] for the as extra buff and [Lightning Arrow](because of [Hail], lightning arrow will freeze normal monsters for the mark buff).\nWhile I don't use it myself, [Escape Shot] can also help you build freeze if you feel lack you're struggling. But [Freezing Salvo] and [Ice-Tipped Arrows] should be more than enough. At lvl 31, freezing enemies become insanely easy because [Ice Shot] has massive freeze buildup, but [Lightning Arrow] with [Ice-Tipped Arrows] gets the job done.",
+        "descriptionPoe2PassiveTree": "Take whatever attribute you need at the time, you'll default to dex if you don't need anything. You should also lookout for good attribute amulets or a strength belt to help out with requirements later on.\nAscendancy order:\n[Projectile Proximity Specialisation](point blank) -> [Endless Munitions] -> [Gathering Winds]"
+      }
+    },
+    {
+      "id": "3",
+      "title": "lvl 31-41",
+      "levelRange": "lvl 31-41",
+      "description": "",
+      "skillGems": [
+        {
+          "activeSkill": {
+            "name": "Ice Shot",
+            "gemSlug": "iceshotplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/IceShotSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportrapidattacksplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supporticebiteplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IceBiteSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Snipe",
+            "gemSlug": "snipeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerSnipeSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportwindowofopportunityplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Freezing Mark",
+            "gemSlug": "freezingmarkplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/FreezingMarkSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FreezingMarkSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set2",
+          "supportGems": [
+            {
+              "gemSlug": "prolongeddurationsupportplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportmarkofsiphoningplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MarkedForDrainSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supporteternalmarkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DazeonCritSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Herald of Ice",
+            "gemSlug": "heraldoficeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfIceSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofIceSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalfocusplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Barrage",
+            "gemSlug": "barrageplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportcooldownrecoveryplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Ice-Tipped Arrows",
+            "gemSlug": "icetippedarrowsplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerShearingBoltsSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Freezing Salvo",
+            "gemSlug": "freezingsalvoplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerFreezingSalvoSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerFreezingSalvoSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportfreezeplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/HypothermiaSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Combat Frenzy",
+            "gemSlug": "combatfrenzyplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerCombatFrenzySkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerCombatFrenzySkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": []
+        }
+      ],
+      "equipment": {
+        "helmet": {
+          "name": "Felt Cap",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+          "slug": "armour-fourhelmetdex2",
+          "explicitDescriptions": [
+            "+8 to Dexterity",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "gloves": {
+          "name": "Bound Bracers",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+          "slug": "armour-fourglovesdex3",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "boots": {
+          "name": "Embossed Boots",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+          "slug": "armour-fourbootsdex3",
+          "explicitDescriptions": [
+            "10% increased Movement Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "belt": {
+          "name": "Rawhide Belt",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.webp",
+          "slug": "armour-fourbelt1",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "amulet": {
+          "name": "Lapis Amulet",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+          "slug": "amulet-fouramulet5",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "leftRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Fire damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "rightRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 6 Lightning damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "flask1": {
+          "name": "Greater Life Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+          "slug": "flask-fourflasklife3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "flask2": {
+          "name": "Greater Mana Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+          "slug": "flask-fourflaskmana3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "charm1": {
+          "name": "Thawing Charm",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.webp",
+          "slug": "flask-fourcharm1",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "mainHand.set1": {
+          "name": "Cultist Bow",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow07.webp",
+          "slug": "weapon-fourbow7",
+          "explicitDescriptions": [
+            "Adds 15 to 24 Cold Damage",
+            "64% increased Physical Damage",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "offHand.set1": {
+          "name": "Broadhead Quiver",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+          "slug": "quiver-fourquiver1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "+1 to Level of all Projectile Skills"
+          ],
+          "implicitDescriptions": []
+        }
+      },
+      "notes": {
+        "descriptionPoeEquipment": "Bow: Once you reach lvl 33, you want to make a good [Dualstring Bow] or [Cultist Bow]. This weapon will last until lvl 46, so go all in with supplies. Alchemy/regal/exalt until it's 6 mod. Try a few different bases with transmute/aug, if you get a high tier prefix, regal and triple exalt slam (or use a essence instead of regal if you found one). Make sure the bow is ilvl 33, this is important for what modifiers it can roll, you'll more often than not, end up with a [Cultist Bow] since they're more common in act 3.\nGenerally you want to use iron rune, but it's important to save 1 for your [Artillery Bow] at lvl 46.\nYour last bow upgrade is going to be at lvl 46 with [Artillery Bow], and that one is going to be a massive upgrade if well rolled.\nFlask: Remember to constantly upgrade your life/mana flask throughout campaign, you can always buy a new one at the vendor when you meet the lvl requirements for the next tier (lvl 10, 16, 23, 30, 40, 50 and 60).\nQuiver: One with +lvls and high amount of flat damage, the base isn't too important.\nBoots: Movement speed on boots is also extremely good if you can find them, try to search the vendor every 1-2 lvls. I would never swap out movement speed boots, only replace them with other boots that have movement speed.\nOther gear: \nIdeally you should stick to evasion or evasion/es hybrid gear, but use whatever looks best at the time.\nHelmet/belt/amulet are good slots to acquire attributes (str on belt, dex or int on helmet).\nBesides that you're just looking for life/resist on gear, but flat damage is the most important on gloves/rings. High evasion chest is also quite good for defense if you find one.\n!!!!Important!!!!!\nAlways salvage weapons with quality for whetstones and always salvage items with sockets for artificers orb, this is extremely important for gear upgrades throughout the campaign.\nI also personally prefer to vendor all rares for gold to gamble in act 3 or act 4 for better gear.",
+        "descriptionPoeSkillGems": "Lesser Jeweller's orb priority - [Snipe] -> [Ice Shot] -> [Freezing Mark] -> [Herald of Ice]\nQuality Priority -  [Freezing Mark] -> [Herald of Ice] -> [Snipe]\nat lvl 31 you want to swap to [Ice Shot] and replace [Herald of Thunder] for [Herald of Ice].\nEssentially the goal is to freeze the boss, press [Barrage] into a perfect window [Snipe]. (if you struggle with Snipe, you can takeout [Window of Opportunity I] for [Hourglass] or [Elemental Focus], but it's not that bad).\nBoss Rotation: use [Ice-Tipped Arrows] before the boss spawns, cast [Freezing Mark], shoot [Ice Shot] until the boss is frozen, when you freeze cast [Barrage] into [Snipe]. (at this point, [Freezing Salvo] does become optional, it is faster to freeze bosses with it, but if you want to reduce your total button usage, feel free to drop it).\nFor general clear, I just use [Ice-Tipped Arrows], [Freezing Mark] for the as extra buff and [Ice Shot] Generally only need [Ice-Tipped Arrows] for rares or big pack.",
+        "descriptionPoe2PassiveTree": "Once you reach lvl 31, you'll want to setup your weapon swap points (you should have 10 after killing the monkey in act 3 in jungle ruins).\nIt's very simple, you want [Freezing Mark] on weapon swap 2 and take the mark nodes at the bottom. Every other skill should be weapon swap 1. (click on the skills detail in your skill menu to assigned weapon sets).\nAscendancy order:\n[Projectile Proximity Specialisation](point blank) -> [Endless Munitions] -> [Gathering Winds]"
+      }
+    },
+    {
+      "id": "4",
+      "title": "lvl 42-59",
+      "levelRange": "lvl 42-59",
+      "description": "",
+      "skillGems": [
+        {
+          "activeSkill": {
+            "name": "Ice Shot",
+            "gemSlug": "iceshotplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/IceShotSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportrapidattacksplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supporticebiteplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IceBiteSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportforkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ForkSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Snipe",
+            "gemSlug": "snipeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerSnipeSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportwindowofopportunityplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalfocusplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Freezing Mark",
+            "gemSlug": "freezingmarkplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/FreezingMarkSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FreezingMarkSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set2",
+          "supportGems": [
+            {
+              "gemSlug": "supportchargedmarkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChargedMarkSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "prolongeddurationsupportplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supporteternalmarkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DazeonCritSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Herald of Ice",
+            "gemSlug": "heraldoficeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfIceSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofIceSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalfocusplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Barrage",
+            "gemSlug": "barrageplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportcooldownrecoveryplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportrapidcastingplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Ice-Tipped Arrows",
+            "gemSlug": "icetippedarrowsplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerShearingBoltsSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportshortfuseplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpediteSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Combat Frenzy",
+            "gemSlug": "combatfrenzyplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerCombatFrenzySkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerCombatFrenzySkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportchargeprofusionplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Wind Dancer",
+            "gemSlug": "winddancerplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportknockbackplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Tornado Shot",
+            "gemSlug": "tornadoshotplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerTornadoShotSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TornadoShotSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "prolongeddurationsupportplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportincreaselimitplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportrapidattacksplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        }
+      ],
+      "equipment": {
+        "helmet": {
+          "name": "Felt Cap",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+          "slug": "armour-fourhelmetdex2",
+          "explicitDescriptions": [
+            "+8 to Dexterity",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "gloves": {
+          "name": "Bound Bracers",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+          "slug": "armour-fourglovesdex3",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "boots": {
+          "name": "Embossed Boots",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+          "slug": "armour-fourbootsdex3",
+          "explicitDescriptions": [
+            "10% increased Movement Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "belt": {
+          "name": "Rawhide Belt",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.webp",
+          "slug": "armour-fourbelt1",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "amulet": {
+          "name": "Lapis Amulet",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+          "slug": "amulet-fouramulet5",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "leftRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Fire damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "rightRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 6 Lightning damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "flask1": {
+          "name": "Greater Life Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+          "slug": "flask-fourflasklife3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "flask2": {
+          "name": "Greater Mana Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+          "slug": "flask-fourflaskmana3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "charm1": {
+          "name": "Thawing Charm",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.webp",
+          "slug": "flask-fourcharm1",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "mainHand.set1": {
+          "name": "Artillery Bow",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow09.webp",
+          "slug": "weapon-fourbow9",
+          "explicitDescriptions": [
+            "109% increased Physical Damage",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "offHand.set1": {
+          "name": "Broadhead Quiver",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+          "slug": "quiver-fourquiver1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "+1 to Level of all Projectile Skills"
+          ],
+          "implicitDescriptions": []
+        }
+      },
+      "notes": {
+        "descriptionPoeEquipment": "Bow: Your last bow upgrade is going to be at lvl 46 with [Artillery Bow]. Because this base has such high base phys, you really want a bow with good %phys. It beats out pretty much any other combination of stats. Of course if you cant find one with %phys, just use one with high flat rolls. Also this is not a hard requirement, any bow with high DPS will work well, [Artillery Bow] is just the best base to craft on at this lvl.\nFlask: Remember to constantly upgrade your life/mana flask throughout campaign, you can always buy a new one at the vendor when you meet the lvl requirements for the next tier (lvl 10, 16, 23, 30, 40, 50 and 60).\nQuiver: One with +lvls and high amount of flat damage, the base isn't too important.\nBoots: Movement speed on boots is also extremely good if you can find them, try to search the vendor every 1-2 lvls. I would never swap out movement speed boots, only replace them with other boots that have movement speed.\nOther gear: \nIdeally you should stick to evasion or evasion/es hybrid gear, but use whatever looks best at the time.\nHelmet/belt/amulet are good slots to acquire attributes (str on belt, dex or int on helmet).\nBesides that you're just looking for life/resist on gear, but flat damage is the most important on gloves/rings. High evasion chest is also quite good for defense if you find one.\n!!!!Important!!!!!\nAlways salvage weapons with quality for whetstones and always salvage items with sockets for artificers orb, this is extremely important for gear upgrades throughout the campaign.\nI also personally prefer to vendor all rares for gold to gamble in act 3 or act 4 for better gear.",
+        "descriptionPoeSkillGems": "Lesser Jeweller's orb priority - [Snipe] -> [Ice Shot] -> [Freezing Mark] -> [Herald of Ice]\nQuality Priority -  [Freezing Mark] -> [Herald of Ice] -> [Snipe]\nIf you drop a 2nd Greater Jeweller's orb during campaign, than use it on [Ice Shot] for [Fork]. (first one goes to [Snipe] for more boss damage).\nYour first lvl 5 support gem should be [Charged Mark] for [Freezing Mark]. This will give you consistent shocks on bosses for even more damage.\nEssentially the goal is to freeze the boss, press [Barrage] into a perfect window [Snipe]. (if you struggle with Snipe, you can takeout [Window of Opportunity I] for [Hourglass] or [Elemental Focus], but it's not that bad).\nBoss Rotation: use [Ice-Tipped Arrows] before the boss spawns, cast [Freezing Mark], shoot [Ice Shot] until the boss is frozen, when you freeze cast [Barrage] into [Snipe]. \nFor general clear, I just use [Ice-Tipped Arrows], [Freezing Mark] for the as extra buff and [Ice Shot] Generally only need [Ice-Tipped Arrows] for rares or big pack.\n[Tornado Shot] can be used for both clear and extra boss damage, for bosses just place it down on top of the boss before it spawns.",
+        "descriptionPoe2PassiveTree": "Once you reach lvl 31, you'll want to setup your weapon swap points (you should have 10 after killing the monkey in act 3 in jungle ruins).\nIt's very simple, you want [Freezing Mark] on weapon swap 2 and take the mark nodes at the bottom. Every other skill should be weapon swap 1. (click on the skills detail in your skill menu to assigned weapon sets).\nAscendancy order:\n[Projectile Proximity Specialisation](point blank) -> [Endless Munitions] -> [Gathering Winds]"
+      }
+    },
+    {
+      "id": "5",
+      "title": "lvl 60+",
+      "levelRange": "lvl 60+",
+      "description": "",
+      "skillGems": [
+        {
+          "activeSkill": {
+            "name": "Ice Shot",
+            "gemSlug": "iceshotplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerIceShot.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/IceShotSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportrapidattacksplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supporticebiteplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IceBiteSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportforkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ForkSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Snipe",
+            "gemSlug": "snipeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerSnipeSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportconcentratedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ConcentratedEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportwindowofopportunityplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WindowOfOpportunitySupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalfocusplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Freezing Mark",
+            "gemSlug": "freezingmarkplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/FreezingMarkSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/FreezingMarkSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set2",
+          "supportGems": [
+            {
+              "gemSlug": "supportchargedmarkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ChargedMarkSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "prolongeddurationsupportplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supporteternalmarkplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/DazeonCritSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Herald of Ice",
+            "gemSlug": "heraldoficeplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/HeraldOfIceSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/HeraldofIceSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalfocusplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ElementalFocusSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Barrage",
+            "gemSlug": "barrageplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerBarrageSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportcooldownrecoveryplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/CooldownReductionSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportrapidcastingplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterCastSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Ice-Tipped Arrows",
+            "gemSlug": "icetippedarrowsplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerShearingBoltsSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "supportshortfuseplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/ExpediteSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportelementalarmamentplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/WeaponElementalDamageSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportmagnifiedareaplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreasedAreaOfEffectSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Combat Frenzy",
+            "gemSlug": "combatfrenzyplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerCombatFrenzySkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/RangerCombatFrenzySkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportchargeprofusionplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MultipleChargesSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Wind Dancer",
+            "gemSlug": "winddancerplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/WindDancerSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": null,
+          "supportGems": [
+            {
+              "gemSlug": "supportknockbackplayer",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/KnockbackSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        },
+        {
+          "activeSkill": {
+            "name": "Tornado Shot",
+            "gemSlug": "tornadoshotplayer",
+            "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DArt/SkillIcons/RangerTornadoShotSkill.webp",
+            "gemIconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/TornadoShotSkillGem.webp",
+            "level": null
+          },
+          "weaponSet": "set1",
+          "supportGems": [
+            {
+              "gemSlug": "prolongeddurationsupportplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/MoreDurationSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportincreaselimitplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/IncreaseLimitSupportGem.webp",
+              "gemType": "SUPPORT"
+            },
+            {
+              "gemSlug": "supportrapidattacksplayertwo",
+              "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Gems/New/NewSupport/FasterAttackSupportGem.webp",
+              "gemType": "SUPPORT"
+            }
+          ]
+        }
+      ],
+      "equipment": {
+        "helmet": {
+          "name": "Felt Cap",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+          "slug": "armour-fourhelmetdex2",
+          "explicitDescriptions": [
+            "+8 to Dexterity",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "gloves": {
+          "name": "Bound Bracers",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+          "slug": "armour-fourglovesdex3",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "boots": {
+          "name": "Embossed Boots",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+          "slug": "armour-fourbootsdex3",
+          "explicitDescriptions": [
+            "10% increased Movement Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "belt": {
+          "name": "Rawhide Belt",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Belts/Basetypes/Belt01.webp",
+          "slug": "armour-fourbelt1",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "amulet": {
+          "name": "Lapis Amulet",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+          "slug": "amulet-fouramulet5",
+          "explicitDescriptions": [
+            "+8 to Strength",
+            "+19 to maximum Life"
+          ],
+          "implicitDescriptions": []
+        },
+        "leftRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Fire damage to Attacks",
+            "Adds 1 to 3 Cold damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "rightRing": {
+          "name": "Iron Ring",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Rings/Basetypes/IronRing.webp",
+          "slug": "ring-fourring1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "Adds 1 to 6 Lightning damage to Attacks"
+          ],
+          "implicitDescriptions": []
+        },
+        "flask1": {
+          "name": "Greater Life Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+          "slug": "flask-fourflasklife3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "flask2": {
+          "name": "Greater Mana Flask",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+          "slug": "flask-fourflaskmana3",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "charm1": {
+          "name": "Thawing Charm",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Charms/Basetypes/ThawingCharm.webp",
+          "slug": "flask-fourcharm1",
+          "explicitDescriptions": [],
+          "implicitDescriptions": []
+        },
+        "mainHand.set1": {
+          "name": "Artillery Bow",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow09.webp",
+          "slug": "weapon-fourbow9",
+          "explicitDescriptions": [
+            "109% increased Physical Damage",
+            "7% increased Attack Speed"
+          ],
+          "implicitDescriptions": []
+        },
+        "offHand.set1": {
+          "name": "Broadhead Quiver",
+          "isUnique": false,
+          "iconURL": "https://cdn.mobalytics.gg/assets/poe-2/images/game/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+          "slug": "quiver-fourquiver1",
+          "explicitDescriptions": [
+            "Adds 2 to 3 Physical Damage to Attacks",
+            "+1 to Level of all Projectile Skills"
+          ],
+          "implicitDescriptions": []
+        }
+      },
+      "notes": {
+        "descriptionPoeEquipment": "Bow: Your last bow upgrade is going to be at lvl 46 with [Artillery Bow]. Because this base has such high base phys, you really want a bow with good %phys. It beats out pretty much any other combination of stats. Of course if you cant find one with %phys, just use one with high flat rolls. Also this is not a hard requirement, any bow with high DPS will work well, [Artillery Bow] is just the best base to craft on at this lvl.\nFlask: Remember to constantly upgrade your life/mana flask throughout campaign, you can always buy a new one at the vendor when you meet the lvl requirements for the next tier (lvl 10, 16, 23, 30, 40, 50 and 60).\nQuiver: One with +lvls and high amount of flat damage, the base isn't too important.\nBoots: Movement speed on boots is also extremely good if you can find them, try to search the vendor every 1-2 lvls. I would never swap out movement speed boots, only replace them with other boots that have movement speed.\nOther gear: \nIdeally you should stick to evasion or evasion/es hybrid gear, but use whatever looks best at the time.\nHelmet/belt/amulet are good slots to acquire attributes (str on belt, dex or int on helmet).\nBesides that you're just looking for life/resist on gear, but flat damage is the most important on gloves/rings. High evasion chest is also quite good for defense if you find one.\n!!!!Important!!!!!\nAlways salvage weapons with quality for whetstones and always salvage items with sockets for artificers orb, this is extremely important for gear upgrades throughout the campaign.\nI also personally prefer to vendor all rares for gold to gamble in act 3 or act 4 for better gear.",
+        "descriptionPoeSkillGems": "Lesser Jeweller's orb priority - [Snipe] -> [Ice Shot] -> [Freezing Mark] -> [Herald of Ice]\nQuality Priority -  [Freezing Mark] -> [Herald of Ice] -> [Snipe]\nIf you drop a 2nd Greater Jeweller's orb during campaign, than use it on [Ice Shot] for [Fork]. (first one goes to [Snipe] for more boss damage).\nYour first lvl 5 support gem should be [Charged Mark] for [Freezing Mark]. This will give you consistent shocks on bosses for even more damage.\nEssentially the goal is to freeze the boss, press [Barrage] into a perfect window [Snipe]. (if you struggle with Snipe, you can takeout [Window of Opportunity I] for [Hourglass] or [Elemental Focus], but it's not that bad).\nBoss Rotation: use [Ice-Tipped Arrows] before the boss spawns, cast [Freezing Mark], shoot [Ice Shot] until the boss is frozen, when you freeze cast [Barrage] into [Snipe]. \nFor general clear, I just use [Ice-Tipped Arrows], [Freezing Mark] for the as extra buff and [Ice Shot] Generally only need [Ice-Tipped Arrows] for rares or big pack.\n[Tornado Shot] can be used for both clear and extra boss damage, for bosses just place it down on top of the boss before it spawns.",
+        "descriptionPoe2PassiveTree": "Once you reach lvl 31, you'll want to setup your weapon swap points (you should have 10 after killing the monkey in act 3 in jungle ruins).\nIt's very simple, you want [Freezing Mark] on weapon swap 2 and take the mark nodes at the bottom. Every other skill should be weapon swap 1. (click on the skills detail in your skill menu to assigned weapon sets).\nAscendancy order:\n[Projectile Proximity Specialisation](point blank) -> [Endless Munitions] -> [Gathering Winds]"
+      }
+    }
+  ],
+  "richTextSections": [
+    {
+      "id": "c81bc723-60d4-42bc-acf2-59b5ed7b2fe1",
+      "title": "Build Overview",
+      "text": "This is my leveling guide for [Ice Shot] Deadeye, swap to the endgame guide after campaign.\nEndgame Guide: mobalytics.gg/poe-2/profile/fubgun/builds/0-5-fubgun-ice-shot-deadeye\n\nWhile this is a [Ice Shot] leveling guide, you unfortunately don't unlock the skill until lvl 31, so you have to start off with [Lightning Arrow] and [Lightning Rod]. \n---------------------------------------------------------------------------------------------------------------------\nVendor regex:\nAct 1: \n\"!Mace|Staff|Spear|Cross|Plate|Cuira|Robe|Raime|Vest|Mantl|Raise|Parry\" \"s: (am|ri|be|bow)|movem|[edgl] to.att|[3-9]\\d% to.*Bow Skill|[2-4]\\d% to.*res|[5-9]\\d to.*life|to.*(int|str)\"\nAct 2+: \"!Mace|Staff|Spear|Cross|Plate|Cuira|Greathe|Mitts|Greav|Robe|Raime|Circle|Tiara|Vest|Mantl|Crown|Cuffs|Raise|Parry\" \"s: (am|ri|be|bow)|movem|to.*(int|str)|[edgl] to.att|[3-9]\\d% to.*Bow Skill|[2-4]\\d% to.*res|[5-9]\\d to.*life\"\n\n(You copy and paste this into your vendor window, to easily see items you might want to buy)\nFollow the leveling filter from here: https://www.pathofexile.com/item-filter/orPBmkto\n(Just click follow, go in game and you'll see it in your filter list)."
+    },
+    {
+      "id": "71f4ee7d-b0c6-4fe5-b046-2d7bf93fb524",
+      "title": "How it Plays",
+      "text": "Quest Rewards in Campaign\n1) Act 2 - Medallion: Increase charm charges gained\n2) Act 3 - Venom reward - Stun threshold\n3) Tattoo Act 4 - Dex/Cold resist/Fire resist\n4) Act 4 Prison - Life recovery from flask\n5) Interlude - Can choose Resist, MS or global defense (it's free to change at anytime, so don't stress)\n\n\nImportant Campaign rewards from league mechanic. These are guaranteed From the current active league mechanic. \nAct 1: Cemetery - Drops a regal\nAct 1: Tomb of the consort - Random Amulet\nAct 1: Hunting grounds - Exalted orb (optional, but good).\nAct 1: Manor ramparts - lvl 5 skill gem (optional)\nAct 1: Ogham manor - Alchemy orb (good for lvl 16 weapons)\nAct 2: Vastiri Outskirts - Exalted orb\nAct 2: Buried Shrines - Lesser Jeweller's orb (Do not skip this).\nAct 2: Valley of the titan - Random unique (optional, but can be good).\nAct 4: Ngakanu - Greater Jeweller's Orb (DO NOT SKIP THIS)\n\nGenerally the league mechanic will probably always be worth doing if you come across it, but the ones I'm listing are the ones you always want to do for a good reward."
+    },
+    {
+      "id": "bd7f0379-7c8c-4b47-8744-35fcea4f45fc",
+      "title": "How it Works",
+      "text": ""
+    },
+    {
+      "id": "a7505586-ae24-481b-b2d9-624e9e932dec",
+      "title": "Changelog",
+      "text": ""
+    }
+  ]
+}
